@@ -1,0 +1,740 @@
+
+body {
+  /* background-image: url(./images/moraineLake2.jpeg); */
+  background-size: cover;
+  font-family: 'Noto Sans', sans-serif;
+  margin: 0;
+  color: black;
+}
+
+.hidden {
+  display: none;
+}
+
+#ui-datepicker-div {
+  padding: 5px;
+  background: white;
+  border: black solid 2px;
+}
+
+#ui-datepicker-div span{
+  color: lightseagreen;
+}
+
+form {
+  padding: 110px 0 80px 0;
+}
+
+.demo {
+  color: lightseagreen;
+}
+
+button {
+  border: black solid 1px;
+  background-color: lightblue;
+  border-radius: 3px;
+  font-size: 15px;
+  padding: 5px 7px 5px 7px
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+a {
+  padding-left: 5px;
+  color: lightseagreen;
+}
+
+/* landingPage */
+
+.landing {
+  text-align: center;
+  height: 100%;
+}
+
+.fadeOutHeader {
+  color: lightblue;
+}
+
+.landingTop {
+  height: 400px;
+  background-image: url(./images/moraineLake2.jpeg);
+  background-size: cover;
+  color: lightseagreen;
+  margin-top: 70px;
+  /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
+}
+
+.landingBottom {
+  background-color: white;
+}
+
+.landingBottom button {
+  margin: 15px 15px 25px 15px;
+}
+
+nav {
+  border-bottom: black solid;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 15px;
+  z-index: 1000;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0 15px 0 0;
+}
+
+nav h1 {
+  padding: 0;
+}
+
+.logo {
+  height: 30px;
+  width: 30px;
+}
+
+.landingList li {
+  margin: 15px;
+  border: lightseagreen solid;
+  padding: 10px;
+}
+
+.landingList {
+  padding: 50px;
+}
+
+.landingBottom h2 {
+  border-bottom: lightseagreen solid;
+  width: max-content;
+  margin: 0 auto;
+}
+
+/* formPages */
+
+.container {
+  position: relative;
+  margin: 10px auto 10px auto;
+  text-align: center;
+  width: 350px;
+  background-color: white;
+  border-radius: 5px;
+  border: black solid;
+  padding: 15px;
+  color: black;
+}
+
+.container h1 {
+  border-bottom: lightseagreen solid;
+  width: max-content;
+  margin: 0 auto;
+  padding-bottom: 5px;
+}
+
+#signUpContainer input {
+  width: 150px;
+}
+
+.container input {
+  width: 200px;
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+  border: black solid 1px;
+  padding: 5px;
+}
+
+.button-right {
+ margin-left: 30px;
+}
+
+.button-left {
+margin-right: 30px;
+}
+
+label {
+  display: inline-block;
+  font-weight: bold;
+  position: absolute;
+  left: 20px;
+}
+
+.logIn {
+  background-color: lightblue;
+  height: 580px;
+}
+
+
+.signUp {
+  background-color: lightblue;
+  height: 580px;
+}
+
+#signUpForm {
+  padding: 110px 0 80px 0;
+}
+
+
+li {
+  list-style-type: none;
+  display: inline;
+}
+
+h1, h2 {
+  margin: 0; 
+  padding: 15px;
+}
+
+/* profile */
+
+#firstName {
+  color: black;
+}
+
+#tripList {
+  height: 100px;
+  min-width: 200px;
+  overflow: scroll;
+}
+
+.profile {
+  text-align: center;
+  padding-top: 200px;
+  background-color: lightblue;
+  height: 380px;
+}
+
+.profile ul {
+  border: black solid;
+  width: max-content;
+  padding: 15px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.profile li {
+  display: block;
+}
+
+.profile button {
+  margin: 30px 0 30px 0;
+  background-color: white;
+}
+
+/* newTrip */
+
+.newTrip {
+  background-color: lightblue;
+}
+
+.newTrip h1{
+  margin-bottom: 30px;
+}
+
+.newTrip .container {
+  margin-bottom: 50px;
+  padding-bottom: 25px;
+}
+
+/* activitySelection */
+
+.weatherContainer {
+  border: lightblue solid;
+  display: inline-block;
+  width: 8%;
+  margin-top: 10px;
+  padding: 15px;
+  min-width: 120px;
+  max-width: 350px;
+}
+.weatherContainer span {
+  color: lightseagreen;
+}
+
+span {
+  color: darkgray;
+}
+
+.activitySelection p {
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.activitySelection h1 {
+  border-bottom: solid lightseagreen;
+  width: max-content;
+  margin: 0 auto 30px auto;
+}
+
+.activitySelection {
+  text-align: center;
+  margin-top: 90px;
+}
+
+.activitySelection button {
+  margin: 30px;
+}
+
+.restaurantSearch, .activitySearch, .hikeSearch {
+  display: inline-block;
+  height: 400px;
+  width: 30%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 15px;
+  min-width: 300px;
+}
+
+.restaurantContainer, .activityContainer, .hikeContainer {
+  border: lightblue solid;
+  display: inline-block;
+  margin-top: 10px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: scroll;
+  padding: 15px 0 15px 0;
+  background-color: lightblue;
+}
+
+.restaurantResults, .activityResults, .hikeResults {
+  border: black solid;
+  background-color: white;
+  display: inline-block;
+  margin-top: 10px;
+  width: 90%;
+  text-align: left;
+  padding: 5px;
+}
+
+#activitySearch-button {
+  background-color: white;
+}
+
+#activitySearch-input {
+  font-size: 12px;
+}
+
+
+
+/* tripPlanner */
+
+.tripPlanner {
+  text-align: center;
+  padding: 20px;
+  margin-top: 90px;
+  background-color: lightblue;
+}
+
+.tripPlanner h1,h3 {
+  border-bottom: solid black;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.plannerDays div {
+  border: lightseagreen solid;
+  display: inline-block;
+  width: 20%;
+  margin-top: 10px;
+  padding: 15px;
+  min-width: 100px;
+  max-width: 350px;
+  background-color: white;
+}
+
+.dayContainer:hover {
+  cursor: pointer;
+}
+
+/* dayView */
+
+.dayView {
+  text-align: center;
+  margin-top: 90px;
+}
+
+.noActivities {
+  margin-bottom: 50px;
+  border-bottom: none;
+}
+
+.dayHeader {
+  display: inline-block;
+}
+
+.dayView p {
+  margin: 0 auto;
+  padding: 0 0 10px 0;
+}
+
+.dayView h2 {
+  border: none; 
+  margin: 0;
+  padding: 0 0 10px 0;
+}
+
+.dayView h1 {
+  border-bottom: solid lightseagreen;
+  margin-bottom: 30px;
+}
+
+.dayActivity {
+  border: solid black;
+  text-align: left;
+  margin: 25px;
+  padding: 20px;
+  position: relative;
+  height: 180px;
+}
+
+.button-notes {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.button-delete {
+  position: absolute;
+  bottom: 20px;
+}
+
+.notesInput {
+  position: absolute;
+  right: 150px;
+  height: 100px;
+  width: 300px;
+  bottom: 20px;
+}
+
+/* packingList */
+
+.packingList {
+  text-align: center;
+  margin-top: 90px;
+  background-color: lightblue;
+}
+
+.packListHeaders {
+  border-bottom: solid lightseagreen;
+  width: max-content;
+  margin: 0 auto 15px auto;
+  padding-bottom: 10px;
+}
+
+.packingList ul {
+  text-align: left;
+}
+
+.packingList li {
+  display: block;
+}
+
+.delete {
+  display: inline;
+  cursor: pointer;
+  right: 20px;
+  position: absolute;
+}
+
+.delete:hover {
+  color: red;
+}
+
+.deleteTrip {
+  display: inline;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.deleteTrip:hover {
+  color: red;
+}
+
+.packListContainer {
+  border: lightseagreen solid;
+  display: inline-block;
+  width: 25%;
+  margin: 10px auto 10px auto;
+  padding: 15px;
+  height: 300px;
+  min-width: 250px;
+  background-color: white;
+}
+
+.listBox {
+  overflow: scroll;
+  height: 225px;
+  position: relative;
+}
+
+.packingList button {
+  margin-left: 10px;
+}
+
+/* footer */
+
+footer {
+  text-align: center;
+  border-top: black solid 2px;
+  background-color: white;
+}
+
+footer ul {
+  margin: 0 auto;
+  padding: 15px;
+}
+
+
+@media only screen and (max-width: 800px) {
+
+  .notesInput {
+    width: 225px;
+  }
+  .landingBottom li {
+    margin: 0;
+  }
+
+  .landingTop {
+    background-image: url(./images/river.jpg);
+    background-size: cover;
+  }
+
+  input {
+    border: solid lightgrey;
+  }
+
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  .dayActivity {
+    height: auto;
+  }
+
+  .landingBottom li {
+    list-style-type: none;
+    display: block;
+  }
+
+  .packListContainer {
+    width: 70%;
+    display: block;
+  }
+
+  .notesInput {
+    display: block;
+    margin: 10px 0 10px 0;
+    position: static;
+  }
+
+  .button-notes {
+    position: static;
+  }
+
+  .button-delete {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    bottom: auto;
+  }
+} 
+
+@media only screen and (max-width: 450px) {
+
+  .delete {
+  right: 20px;
+  position: absolute;
+  }
+
+  button {
+    font-size: 12px;
+  }
+
+  #viewPlanner {
+    margin-top: 100px;
+  }
+
+  .activitySelection button {
+    margin: 15px;
+  }
+
+  #signUpForm {
+    padding: 110px 0 1px 0;
+  }
+
+  .signUp {
+    height: auto;
+  }
+
+  .profile {
+    padding-top: 150px;
+  }
+
+  .fadeOutHeader {
+    color: white;
+  }
+  
+  .activitySelection h1 {
+    font-size: 25px;
+  }
+
+  .newTrip {
+    height: 650px;
+  }
+
+  .packListHeaders {
+   font-size: 20px;
+  }
+
+  .restaurantSearch {
+    display: block;
+    height: 400px;
+    width: 80%;
+    margin: 50px auto 30px auto;
+    padding: 15px;
+  }
+
+  .dayHeader {
+    font-size: 25px;
+  }
+
+  .dayView p {
+    font-size: 12px;
+  }
+
+  /* .activitySelection button {
+    margin: 100px 0 50px 0;
+  } */
+
+ .activitySearch, .hikeSearch {
+    display: block;
+    height: 400px;
+    width: 80%;
+    margin: 120px auto 30px auto;
+    padding: 15px;
+  }
+
+  .activitySelection, .tripPlanner, .dayView, .packingList {
+    margin-top: 130px;
+    padding: 20px;
+  }
+
+  .landingList {
+    width: 300px;
+    margin: auto;
+  }
+
+  .weatherContainer {
+    width: 30%;
+  }
+
+  nav li {
+    list-style-type: none;
+    display: block;
+  }
+
+  .landingTop h2 {
+    padding: 70px;
+  }
+
+  .landingBottom h2 {
+    padding: 10px;
+  }
+
+  .landingList {
+    padding: 10px;
+  }
+
+  .landing {
+    height: auto;
+  }
+
+  .dayContainer {
+    font-size: smaller;
+  }
+
+  .container {
+    font-size: 12px;
+    width: 240px;
+  }
+
+  .tripPlanner h1 {
+    font-size: x-large;
+  }
+
+  .notesInput {
+    width: 200px;
+  }
+
+  .container label {
+    display: block;
+    text-align: left;
+    position: static;
+  }
+
+  .container input {
+    display: block;
+    position: static;
+    width: 95%;
+    margin-bottom: 15px
+  }
+
+  .container br {
+    display: none;
+  }
+
+
+
+} 
+
+@media only screen and (max-width: 350px) {
+
+.restaurantContainer, .activityContainer, .hikeContainer {
+  width: 90%;
+}
+
+.restaurantSearch, .activitySearch, .hikeSearch {
+  padding: 15px 0px;
+}
+
+.activitySelection h1 {
+  max-width: 300px;
+  padding: 15px 0px;
+}
+
+.tripPlanner h1 {
+  max-width: 300px;
+  padding: 15px 0px;
+}
+
+.notesInput {
+  width: 150px;
+  margin-top: 0px;
+}
+
+.dayActivity p {
+  padding-bottom: 0px;
+}
+
+.dayActivity a {
+  font-size: 16px;
+  display: block;
+  margin-top: 30px;
+}
+
+}
+
+@media only screen and (max-width: 750px) {
+
+  .landingBottom li {
+    list-style-type: none;
+    display: block;
+  }
+}
