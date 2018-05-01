@@ -1,10 +1,10 @@
 import React from 'react';
 import {shallow, mount, render} from 'enzyme';
 
-import Nav from './nav';
+import NewTrip from './newTrip';
 
-describe('<Nav />', () => {
+describe('<NewTrip />', () => {
 	it('Renders without crashing', () => {
-		shallow(<Nav />);
+		shallow(<NewTrip />);
 	});
 });

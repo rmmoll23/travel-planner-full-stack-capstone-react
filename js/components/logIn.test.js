@@ -1,10 +1,10 @@
 import React from 'react';
 import {shallow, mount, render} from 'enzyme';
 
-import Nav from './nav';
+import LogIn from './logIn';
 
-describe('<Nav />', () => {
+describe('<LogIn />', () => {
 	it('Renders without crashing', () => {
-		shallow(<Nav />);
+		shallow(<LogIn />);
 	});
 });

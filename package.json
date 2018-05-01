@@ -67,7 +67,7 @@
     "webpack": "^1.15.0"
   },
   "scripts": {
-    "start": "http-server build",
+    "start": "http-server -p 8081 build",
     "dev": "run-p watch serve",
     "test": "mocha --recursive --compilers js:babel-core/register",
     "react-test": "react-scripts test --env=jsdom",

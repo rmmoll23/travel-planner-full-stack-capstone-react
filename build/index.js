@@ -60,6 +60,46 @@
 	
 	var _nav2 = _interopRequireDefault(_nav);
 	
+	var _activitySelection = __webpack_require__(547);
+	
+	var _activitySelection2 = _interopRequireDefault(_activitySelection);
+	
+	var _dayView = __webpack_require__(548);
+	
+	var _dayView2 = _interopRequireDefault(_dayView);
+	
+	var _footer = __webpack_require__(549);
+	
+	var _footer2 = _interopRequireDefault(_footer);
+	
+	var _landing = __webpack_require__(550);
+	
+	var _landing2 = _interopRequireDefault(_landing);
+	
+	var _logIn = __webpack_require__(551);
+	
+	var _logIn2 = _interopRequireDefault(_logIn);
+	
+	var _newTrip = __webpack_require__(552);
+	
+	var _newTrip2 = _interopRequireDefault(_newTrip);
+	
+	var _packingList = __webpack_require__(553);
+	
+	var _packingList2 = _interopRequireDefault(_packingList);
+	
+	var _profile = __webpack_require__(554);
+	
+	var _profile2 = _interopRequireDefault(_profile);
+	
+	var _signUp = __webpack_require__(555);
+	
+	var _signUp2 = _interopRequireDefault(_signUp);
+	
+	var _tripPlanner = __webpack_require__(556);
+	
+	var _tripPlanner2 = _interopRequireDefault(_tripPlanner);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var render = _reactDom2.default.render;
@@ -67,7 +107,47 @@
 	// import '../assets/css/main.css';
 	
 	document.addEventListener('DOMContentLoaded', function () {
-		return _reactDom2.default.render(_react2.default.createElement(_nav2.default, null), document.getElementById('reactNav'));
+	  return _reactDom2.default.render(_react2.default.createElement(_nav2.default, null), document.getElementById('reactNav'));
+	});
+	
+	document.addEventListener('DOMContentLoaded', function () {
+	  return _reactDom2.default.render(_react2.default.createElement(_activitySelection2.default, null), document.getElementById('reactActivitySelection'));
+	});
+	
+	document.addEventListener('DOMContentLoaded', function () {
+	  return _reactDom2.default.render(_react2.default.createElement(_dayView2.default, null), document.getElementById('reactDayView'));
+	});
+	
+	document.addEventListener('DOMContentLoaded', function () {
+	  return _reactDom2.default.render(_react2.default.createElement(_footer2.default, null), document.getElementById('reactFooter'));
+	});
+	
+	document.addEventListener('DOMContentLoaded', function () {
+	  return _reactDom2.default.render(_react2.default.createElement(_landing2.default, null), document.getElementById('reactLanding'));
+	});
+	
+	document.addEventListener('DOMContentLoaded', function () {
+	  return _reactDom2.default.render(_react2.default.createElement(_logIn2.default, null), document.getElementById('reactLogIn'));
+	});
+	
+	document.addEventListener('DOMContentLoaded', function () {
+	  return _reactDom2.default.render(_react2.default.createElement(_newTrip2.default, null), document.getElementById('reactNewTrip'));
+	});
+	
+	document.addEventListener('DOMContentLoaded', function () {
+	  return _reactDom2.default.render(_react2.default.createElement(_packingList2.default, null), document.getElementById('reactPackingList'));
+	});
+	
+	document.addEventListener('DOMContentLoaded', function () {
+	  return _reactDom2.default.render(_react2.default.createElement(_signUp2.default, null), document.getElementById('reactSignUp'));
+	});
+	
+	document.addEventListener('DOMContentLoaded', function () {
+	  return _reactDom2.default.render(_react2.default.createElement(_profile2.default, null), document.getElementById('reactProfile'));
+	});
+	
+	document.addEventListener('DOMContentLoaded', function () {
+	  return _reactDom2.default.render(_react2.default.createElement(_tripPlanner2.default, null), document.getElementById('reactTripPlanner'));
 	});
 
 /***/ }),
@@ -21904,7 +21984,7 @@
 	        _react2.default.createElement(
 	            'h1',
 	            null,
-	            _react2.default.createElement('img', { className: 'logo', src: 'assets/images/globe icon.png' }),
+	            _react2.default.createElement('img', { className: 'logo', src: 'assets/stylesheets/images/globeIcon.png' }),
 	            '\xA0 \xA0Travel Planner'
 	        ),
 	        _react2.default.createElement(
@@ -66936,6 +67016,903 @@
 	}
 	
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+
+/***/ }),
+/* 547 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	        value: true
+	});
+	exports.default = ActivitySelection;
+	
+	__webpack_require__(58);
+	
+	__webpack_require__(126);
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(12);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _enzyme = __webpack_require__(128);
+	
+	var _enzymeAdapterReact = __webpack_require__(525);
+	
+	var _enzymeAdapterReact2 = _interopRequireDefault(_enzymeAdapterReact);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	(0, _enzyme.configure)({ adapter: new _enzymeAdapterReact2.default() });
+	
+	function ActivitySelection(props) {
+	        return _react2.default.createElement(
+	                'main',
+	                { role: 'main', className: 'activitySelection hidden' },
+	                _react2.default.createElement('h1', { className: 'viewHeader' }),
+	                _react2.default.createElement(
+	                        'h2',
+	                        { 'aria-label': '5 day weather forecast' },
+	                        '5 Day Weather Forecast'
+	                ),
+	                _react2.default.createElement('div', { className: 'weatherBar' }),
+	                _react2.default.createElement(
+	                        'div',
+	                        { className: 'searchContainers' },
+	                        _react2.default.createElement(
+	                                'div',
+	                                { className: 'restaurantSearch' },
+	                                _react2.default.createElement(
+	                                        'h2',
+	                                        null,
+	                                        'Restaurants'
+	                                ),
+	                                _react2.default.createElement('div', { 'aria-label': 'Restaurant search results in the area', className: 'restaurantContainer' })
+	                        ),
+	                        _react2.default.createElement(
+	                                'div',
+	                                { className: 'activitySearch' },
+	                                _react2.default.createElement(
+	                                        'h2',
+	                                        null,
+	                                        'Activities/Places to Stay'
+	                                ),
+	                                _react2.default.createElement(
+	                                        'div',
+	                                        { className: 'activityContainer' },
+	                                        _react2.default.createElement('label', { htmlFor: 'search' }),
+	                                        _react2.default.createElement('input', { name: 'search', id: 'activitySearch-input', type: 'text', 'aria-label': 'Enter what you would like to search for in this city', placeholder: 'search', required: true }),
+	                                        _react2.default.createElement(
+	                                                'button',
+	                                                { id: 'activitySearch-button', type: 'submit' },
+	                                                'Search'
+	                                        ),
+	                                        _react2.default.createElement(
+	                                                'div',
+	                                                { 'aria-label': 'Activity search results in the area', 'aria-live': 'assertive', className: 'activityResultsContainer' },
+	                                                _react2.default.createElement(
+	                                                        'h2',
+	                                                        { className: 'searchMessage' },
+	                                                        'Searching...'
+	                                                )
+	                                        )
+	                                )
+	                        ),
+	                        _react2.default.createElement(
+	                                'div',
+	                                { className: 'hikeSearch' },
+	                                _react2.default.createElement(
+	                                        'h2',
+	                                        null,
+	                                        'Hiking Trails'
+	                                ),
+	                                _react2.default.createElement('div', { 'aria-label': 'Hiking search results in the area', className: 'hikeContainer' })
+	                        )
+	                ),
+	                _react2.default.createElement(
+	                        'button',
+	                        { id: 'viewPlanner', className: 'button-left', type: 'button' },
+	                        'View Trip Planner'
+	                ),
+	                _react2.default.createElement(
+	                        'button',
+	                        { id: 'createPackList', className: 'button-right', type: 'button' },
+	                        'Create Packing List'
+	                )
+	        );
+	}
+
+/***/ }),
+/* 548 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = DayView;
+	
+	__webpack_require__(58);
+	
+	__webpack_require__(126);
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(12);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _enzyme = __webpack_require__(128);
+	
+	var _enzymeAdapterReact = __webpack_require__(525);
+	
+	var _enzymeAdapterReact2 = _interopRequireDefault(_enzymeAdapterReact);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	(0, _enzyme.configure)({ adapter: new _enzymeAdapterReact2.default() });
+	
+	function DayView(props) {
+	  return _react2.default.createElement('main', { role: 'main', className: 'dayView hidden' });
+	}
+
+/***/ }),
+/* 549 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = Footer;
+	
+	__webpack_require__(58);
+	
+	__webpack_require__(126);
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(12);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _enzyme = __webpack_require__(128);
+	
+	var _enzymeAdapterReact = __webpack_require__(525);
+	
+	var _enzymeAdapterReact2 = _interopRequireDefault(_enzymeAdapterReact);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	(0, _enzyme.configure)({ adapter: new _enzymeAdapterReact2.default() });
+	
+	function Footer(props) {
+	    return _react2.default.createElement(
+	        'footer',
+	        { role: 'contentinfo' },
+	        _react2.default.createElement(
+	            'ul',
+	            null,
+	            _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                    'p',
+	                    { id: 'copyright' },
+	                    '\xA9 2018 Ryan Moll'
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                    'a',
+	                    { href: 'mailto:rmmoll23@gmail.com?Subject=Hello', title: 'Send me an email' },
+	                    'Email'
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                    'a',
+	                    { href: 'https://www.linkedin.com/in/ryan-moll-a876ba70/', target: '_blank' },
+	                    'LinkedIn'
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                    'a',
+	                    { href: 'https://github.com/rmmoll23', title: 'Check out my code on GitHub', target: '_blank' },
+	                    'GitHub'
+	                )
+	            )
+	        )
+	    );
+	}
+
+/***/ }),
+/* 550 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	        value: true
+	});
+	exports.default = Landing;
+	
+	__webpack_require__(58);
+	
+	__webpack_require__(126);
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(12);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _enzyme = __webpack_require__(128);
+	
+	var _enzymeAdapterReact = __webpack_require__(525);
+	
+	var _enzymeAdapterReact2 = _interopRequireDefault(_enzymeAdapterReact);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	(0, _enzyme.configure)({ adapter: new _enzymeAdapterReact2.default() });
+	
+	function Landing(props) {
+	        return _react2.default.createElement(
+	                'main',
+	                { role: 'main', className: 'landing' },
+	                _react2.default.createElement(
+	                        'div',
+	                        { className: 'landingTop' },
+	                        _react2.default.createElement(
+	                                'h2',
+	                                { 'aria-label': 'All of your traveling needs in one place', className: 'fadeOutHeader' },
+	                                'All of your traveling needs in one place'
+	                        )
+	                ),
+	                _react2.default.createElement(
+	                        'div',
+	                        { className: 'landingBottom' },
+	                        _react2.default.createElement(
+	                                'h2',
+	                                null,
+	                                'Features'
+	                        ),
+	                        _react2.default.createElement(
+	                                'ul',
+	                                { className: 'landingList' },
+	                                _react2.default.createElement(
+	                                        'li',
+	                                        { 'aria-label': 'Search for things to do' },
+	                                        'Search for things to do'
+	                                ),
+	                                _react2.default.createElement(
+	                                        'li',
+	                                        { 'aria-label': 'Add them to your Planner' },
+	                                        'Add them to your planner'
+	                                ),
+	                                _react2.default.createElement(
+	                                        'li',
+	                                        { 'aria-label': 'Make a packing list' },
+	                                        'Make a packing list'
+	                                )
+	                        ),
+	                        _react2.default.createElement(
+	                                'button',
+	                                { id: 'signUp-button', className: 'button-left', type: 'button' },
+	                                'Sign Up'
+	                        ),
+	                        _react2.default.createElement(
+	                                'button',
+	                                { id: 'logIn-button', className: 'button-right', type: 'button' },
+	                                'Log In'
+	                        )
+	                )
+	        );
+	}
+
+/***/ }),
+/* 551 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = LogIn;
+	
+	__webpack_require__(58);
+	
+	__webpack_require__(126);
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(12);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _enzyme = __webpack_require__(128);
+	
+	var _enzymeAdapterReact = __webpack_require__(525);
+	
+	var _enzymeAdapterReact2 = _interopRequireDefault(_enzymeAdapterReact);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	(0, _enzyme.configure)({ adapter: new _enzymeAdapterReact2.default() });
+	
+	function LogIn(props) {
+	    return _react2.default.createElement(
+	        'main',
+	        { role: 'main', className: 'logIn hidden' },
+	        _react2.default.createElement(
+	            'form',
+	            null,
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'container' },
+	                _react2.default.createElement(
+	                    'h1',
+	                    null,
+	                    'Log in'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Please enter your username and password'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    { className: 'demo' },
+	                    'Demo username: demoUser'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    { className: 'demo' },
+	                    'Demo password: password'
+	                ),
+	                _react2.default.createElement(
+	                    'label',
+	                    { htmlFor: 'username' },
+	                    'Username'
+	                ),
+	                _react2.default.createElement('input', { 'aria-label': 'Enter username', id: 'logIn-username', type: 'text', placeholder: 'Enter Username', value: '', name: 'username', required: true }),
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement(
+	                    'label',
+	                    { htmlFor: 'password' },
+	                    'Password'
+	                ),
+	                _react2.default.createElement('input', { id: 'logIn-password', type: 'password', placeholder: 'Enter Password', name: 'password', value: '', required: true }),
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement(
+	                    'button',
+	                    { id: 'cancelLogIn', className: 'button-left', type: 'button' },
+	                    'Cancel'
+	                ),
+	                _react2.default.createElement(
+	                    'button',
+	                    { id: 'enterApp', className: 'button-right', type: 'submit' },
+	                    'Submit'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Don\'t have an account? ',
+	                    _react2.default.createElement(
+	                        'a',
+	                        { id: 'toSignUp', href: '#' },
+	                        'Sign up'
+	                    )
+	                )
+	            )
+	        )
+	    );
+	}
+
+/***/ }),
+/* 552 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = NewTrip;
+	
+	__webpack_require__(58);
+	
+	__webpack_require__(126);
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(12);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _enzyme = __webpack_require__(128);
+	
+	var _enzymeAdapterReact = __webpack_require__(525);
+	
+	var _enzymeAdapterReact2 = _interopRequireDefault(_enzymeAdapterReact);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	(0, _enzyme.configure)({ adapter: new _enzymeAdapterReact2.default() });
+	
+	function NewTrip(props) {
+	    return _react2.default.createElement(
+	        'main',
+	        { role: 'main', className: 'newTrip hidden' },
+	        _react2.default.createElement(
+	            'form',
+	            null,
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'container' },
+	                _react2.default.createElement(
+	                    'h1',
+	                    null,
+	                    'Create new trip'
+	                ),
+	                _react2.default.createElement(
+	                    'label',
+	                    { htmlFor: 'tripName' },
+	                    'Name of trip'
+	                ),
+	                _react2.default.createElement('input', { 'aria-label': 'Enter name of trip', type: 'text', id: 'tripName', placeholder: 'Enter name of trip', name: 'tripName', required: true }),
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement(
+	                    'label',
+	                    { htmlFor: 'city' },
+	                    'Location'
+	                ),
+	                _react2.default.createElement('input', { 'aria-label': 'Enter city of trip', type: 'text', id: 'tripLocation', placeholder: 'Enter city: \'Austin, TX\' or \'London, UK\'', name: 'city', required: true }),
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement(
+	                    'label',
+	                    { htmlFor: 'from' },
+	                    'Start Date'
+	                ),
+	                _react2.default.createElement('input', { 'aria-label': 'Enter start date of trip', type: 'text', id: 'from', name: 'from', placeholder: 'Enter trip start date', readOnly: 'true' }),
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement(
+	                    'label',
+	                    { htmlFor: 'to' },
+	                    'End Date'
+	                ),
+	                _react2.default.createElement('input', { 'aria-label': 'Enter end date of trip', type: 'text', id: 'to', name: 'to', placeholder: 'Enter trip end date', readOnly: 'true' }),
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement(
+	                    'button',
+	                    { id: 'cancelTrip', className: 'button-left', type: 'button' },
+	                    'Cancel'
+	                ),
+	                _react2.default.createElement(
+	                    'button',
+	                    { id: 'createTrip', className: 'button-right', type: 'submit' },
+	                    'Submit'
+	                )
+	            )
+	        )
+	    );
+	}
+
+/***/ }),
+/* 553 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	        value: true
+	});
+	exports.default = PackingList;
+	
+	__webpack_require__(58);
+	
+	__webpack_require__(126);
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(12);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _enzyme = __webpack_require__(128);
+	
+	var _enzymeAdapterReact = __webpack_require__(525);
+	
+	var _enzymeAdapterReact2 = _interopRequireDefault(_enzymeAdapterReact);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	(0, _enzyme.configure)({ adapter: new _enzymeAdapterReact2.default() });
+	
+	function PackingList(props) {
+	        return _react2.default.createElement(
+	                'main',
+	                { role: 'main', className: 'packingList hidden' },
+	                _react2.default.createElement('h1', { 'aria-label': 'packing list', className: 'packListHeaders viewHeader' }),
+	                _react2.default.createElement(
+	                        'div',
+	                        null,
+	                        _react2.default.createElement(
+	                                'div',
+	                                { className: 'packListContainer' },
+	                                _react2.default.createElement(
+	                                        'h2',
+	                                        { className: 'packListHeaders' },
+	                                        'Clothing'
+	                                ),
+	                                _react2.default.createElement(
+	                                        'div',
+	                                        { className: 'listBox' },
+	                                        _react2.default.createElement('input', { type: 'text', placeholder: 'Add Item', name: 'addItem', className: 'itemToAdd', required: true }),
+	                                        _react2.default.createElement(
+	                                                'button',
+	                                                { className: 'button-addItem', type: 'button' },
+	                                                'Add Item'
+	                                        ),
+	                                        _react2.default.createElement('div', { className: 'itemList Clothing' })
+	                                )
+	                        ),
+	                        _react2.default.createElement(
+	                                'div',
+	                                { className: 'packListContainer' },
+	                                _react2.default.createElement(
+	                                        'h2',
+	                                        { className: 'packListHeaders' },
+	                                        'Pets'
+	                                ),
+	                                _react2.default.createElement(
+	                                        'div',
+	                                        { className: 'listBox' },
+	                                        _react2.default.createElement('input', { type: 'text', placeholder: 'Add Item', name: 'addItem', className: 'itemToAdd', required: true }),
+	                                        _react2.default.createElement(
+	                                                'button',
+	                                                { className: 'button-addItem', type: 'button' },
+	                                                'Add Item'
+	                                        ),
+	                                        _react2.default.createElement('div', { className: 'itemList Pets' })
+	                                )
+	                        ),
+	                        _react2.default.createElement(
+	                                'div',
+	                                { className: 'packListContainer' },
+	                                _react2.default.createElement(
+	                                        'h2',
+	                                        { className: 'packListHeaders' },
+	                                        'Media'
+	                                ),
+	                                _react2.default.createElement(
+	                                        'div',
+	                                        { className: 'listBox' },
+	                                        _react2.default.createElement('input', { type: 'text', placeholder: 'Add Item', name: 'addItem', className: 'itemToAdd', required: true }),
+	                                        _react2.default.createElement(
+	                                                'button',
+	                                                { className: 'button-addItem', type: 'button' },
+	                                                'Add Item'
+	                                        ),
+	                                        _react2.default.createElement('div', { className: 'itemList Media' })
+	                                )
+	                        ),
+	                        _react2.default.createElement(
+	                                'div',
+	                                { className: 'packListContainer' },
+	                                _react2.default.createElement(
+	                                        'h2',
+	                                        { className: 'packListHeaders' },
+	                                        'Toiletries'
+	                                ),
+	                                _react2.default.createElement(
+	                                        'div',
+	                                        { className: 'listBox' },
+	                                        _react2.default.createElement('input', { type: 'text', placeholder: 'Add Item', name: 'addItem', className: 'itemToAdd', required: true }),
+	                                        _react2.default.createElement(
+	                                                'button',
+	                                                { className: 'button-addItem', type: 'button' },
+	                                                'Add Item'
+	                                        ),
+	                                        _react2.default.createElement('div', { className: 'itemList Toiletries' })
+	                                )
+	                        ),
+	                        _react2.default.createElement(
+	                                'div',
+	                                { className: 'packListContainer' },
+	                                _react2.default.createElement(
+	                                        'h2',
+	                                        { className: 'packListHeaders' },
+	                                        'Travel'
+	                                ),
+	                                _react2.default.createElement(
+	                                        'div',
+	                                        { className: 'listBox' },
+	                                        _react2.default.createElement('input', { type: 'text', placeholder: 'Add Item', name: 'addItem', className: 'itemToAdd', required: true }),
+	                                        _react2.default.createElement(
+	                                                'button',
+	                                                { className: 'button-addItem', type: 'button' },
+	                                                'Add Item'
+	                                        ),
+	                                        _react2.default.createElement('div', { className: 'itemList Travel' })
+	                                )
+	                        ),
+	                        _react2.default.createElement(
+	                                'div',
+	                                { className: 'packListContainer' },
+	                                _react2.default.createElement(
+	                                        'h2',
+	                                        { className: 'packListHeaders' },
+	                                        'Miscellaneous'
+	                                ),
+	                                _react2.default.createElement(
+	                                        'div',
+	                                        { className: 'listBox' },
+	                                        _react2.default.createElement('input', { type: 'text', placeholder: 'Add Item', name: 'addItem', className: 'itemToAdd', required: true }),
+	                                        _react2.default.createElement(
+	                                                'button',
+	                                                { className: 'button-addItem', type: 'button' },
+	                                                'Add Item'
+	                                        ),
+	                                        _react2.default.createElement('div', { className: 'itemList Miscellaneous' })
+	                                )
+	                        )
+	                )
+	        );
+	}
+
+/***/ }),
+/* 554 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = Profile;
+	
+	__webpack_require__(58);
+	
+	__webpack_require__(126);
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(12);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _enzyme = __webpack_require__(128);
+	
+	var _enzymeAdapterReact = __webpack_require__(525);
+	
+	var _enzymeAdapterReact2 = _interopRequireDefault(_enzymeAdapterReact);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	(0, _enzyme.configure)({ adapter: new _enzymeAdapterReact2.default() });
+	
+	function Profile(props) {
+	    return _react2.default.createElement(
+	        'main',
+	        { role: 'main', className: 'profile hidden' },
+	        _react2.default.createElement(
+	            'h1',
+	            { 'aria-label': 'Welcome' },
+	            'Welcome, ',
+	            _react2.default.createElement(
+	                'span',
+	                { id: 'firstName' },
+	                'John!'
+	            )
+	        ),
+	        _react2.default.createElement(
+	            'h2',
+	            { 'aria-label': 'Current Saved Trips' },
+	            'Current Saved Trips'
+	        ),
+	        _react2.default.createElement('ul', { id: 'tripList' }),
+	        _react2.default.createElement(
+	            'button',
+	            { id: 'newTrip', type: 'button' },
+	            'Create new trip'
+	        )
+	    );
+	}
+
+/***/ }),
+/* 555 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = SignUp;
+	
+	__webpack_require__(58);
+	
+	__webpack_require__(126);
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(12);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _enzyme = __webpack_require__(128);
+	
+	var _enzymeAdapterReact = __webpack_require__(525);
+	
+	var _enzymeAdapterReact2 = _interopRequireDefault(_enzymeAdapterReact);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	(0, _enzyme.configure)({ adapter: new _enzymeAdapterReact2.default() });
+	
+	function SignUp(props) {
+	    return _react2.default.createElement(
+	        'main',
+	        { role: 'main', className: 'signUp hidden' },
+	        _react2.default.createElement(
+	            'form',
+	            { id: 'signUpForm' },
+	            _react2.default.createElement(
+	                'div',
+	                { id: 'signUpContainer', className: 'container' },
+	                _react2.default.createElement(
+	                    'h1',
+	                    null,
+	                    'Sign Up'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Please fill in this form to create an account'
+	                ),
+	                _react2.default.createElement(
+	                    'label',
+	                    { htmlFor: 'name' },
+	                    'First Name'
+	                ),
+	                _react2.default.createElement('input', { 'aria-label': 'Enter first name', type: 'text', id: 'signUp-firstName', name: 'name', required: true }),
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement(
+	                    'label',
+	                    { htmlFor: 'username' },
+	                    'Username'
+	                ),
+	                _react2.default.createElement('input', { 'aria-label': 'Enter username', type: 'text', id: 'signUp-username', name: 'username', required: true }),
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement(
+	                    'label',
+	                    { htmlFor: 'password' },
+	                    'Password'
+	                ),
+	                _react2.default.createElement('input', { 'aria-label': 'Enter password', type: 'password', id: 'signUp-password', name: 'password', required: true }),
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement(
+	                    'label',
+	                    { htmlFor: 'password-confirm' },
+	                    'Confirm Password'
+	                ),
+	                _react2.default.createElement('input', { 'aria-label': 'Confirm password', type: 'password', id: 'signUp-passwordB', name: 'password-confirm', required: true }),
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement(
+	                    'button',
+	                    { id: 'cancel', className: 'button-left', type: 'button' },
+	                    'Cancel'
+	                ),
+	                _react2.default.createElement(
+	                    'button',
+	                    { id: 'createAccount', className: 'button-right', type: 'submit' },
+	                    'Submit'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Already have an account? ',
+	                    _react2.default.createElement(
+	                        'a',
+	                        { id: 'toLogIn', href: '#' },
+	                        'Log in'
+	                    )
+	                )
+	            )
+	        )
+	    );
+	}
+
+/***/ }),
+/* 556 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = TripPlanner;
+	
+	__webpack_require__(58);
+	
+	__webpack_require__(126);
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(12);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _enzyme = __webpack_require__(128);
+	
+	var _enzymeAdapterReact = __webpack_require__(525);
+	
+	var _enzymeAdapterReact2 = _interopRequireDefault(_enzymeAdapterReact);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	(0, _enzyme.configure)({ adapter: new _enzymeAdapterReact2.default() });
+	
+	function TripPlanner(props) {
+	  return _react2.default.createElement(
+	    'main',
+	    { role: 'main', className: 'tripPlanner hidden' },
+	    _react2.default.createElement('h1', { className: 'viewHeader' }),
+	    _react2.default.createElement(
+	      'p',
+	      null,
+	      'Select a day to view more details'
+	    ),
+	    _react2.default.createElement('br', null),
+	    _react2.default.createElement('div', { className: 'plannerDays' })
+	  );
+	}
 
 /***/ })
 /******/ ]);
