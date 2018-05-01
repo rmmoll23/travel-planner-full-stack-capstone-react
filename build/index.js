@@ -67399,7 +67399,7 @@
 	                    { htmlFor: 'username' },
 	                    'Username'
 	                ),
-	                _react2.default.createElement('input', { 'aria-label': 'Enter username', id: 'logIn-username', type: 'text', placeholder: 'Enter Username', value: '', name: 'username', required: true }),
+	                _react2.default.createElement('input', { 'aria-label': 'Enter username', id: 'logIn-username', type: 'text', placeholder: 'Enter Username', name: 'username', required: true }),
 	                _react2.default.createElement('br', null),
 	                _react2.default.createElement('br', null),
 	                _react2.default.createElement(
@@ -67407,7 +67407,7 @@
 	                    { htmlFor: 'password' },
 	                    'Password'
 	                ),
-	                _react2.default.createElement('input', { id: 'logIn-password', type: 'password', placeholder: 'Enter Password', name: 'password', value: '', required: true }),
+	                _react2.default.createElement('input', { id: 'logIn-password', type: 'password', placeholder: 'Enter Password', name: 'password', required: true }),
 	                _react2.default.createElement('br', null),
 	                _react2.default.createElement('br', null),
 	                _react2.default.createElement(

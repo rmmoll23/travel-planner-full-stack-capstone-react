@@ -21,10 +21,10 @@ export default function LogIn(props) {
                         <p className="demo">Demo password: password</p>
                     
                         <label htmlFor="username">Username</label>
-                        <input aria-label="Enter username" id="logIn-username" type="text" placeholder="Enter Username" value="" name="username" required /><br /><br />
+                        <input aria-label="Enter username" id="logIn-username" type="text" placeholder="Enter Username" name="username" required /><br /><br />
                     
                         <label htmlFor="password">Password</label>
-                        <input id="logIn-password" type="password" placeholder="Enter Password" name="password" value="" required /><br /><br />
+                        <input id="logIn-password" type="password" placeholder="Enter Password" name="password" required /><br /><br />
                         <button id="cancelLogIn" className="button-left" type="button">Cancel</button>
                         <button id="enterApp" className="button-right" type="submit">Submit</button>
                     

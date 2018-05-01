@@ -15,10 +15,10 @@ function clearInputs() {
 
 //Watches signup form click, intercepts default post behavior, performs light validation, and sends data to create the user.
 function handleSignupClick() {
-	//TODO: Experiment with Google reCaptcha on this form
-	$('#signUpForm').submit((e) => {
+    //TODO: Experiment with Google reCaptcha on this form
+    $(document).on('submit', '#signUpForm', function(event) {
+        event.preventDefault();
         console.log('submit');
-		e.preventDefault();
 		const username = $('#signUp-username').val();
 		const password = $('#signUp-password').val();
 		const passwordB = $('#signUp-passwordB').val();

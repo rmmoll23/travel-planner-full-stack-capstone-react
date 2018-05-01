@@ -13,9 +13,9 @@ function clearInputs() {
 
 //Watches login form click, intercepts default post behavior, performs light validation, and sends data to validate the attempt. On success, writes the JWT token to local storage to validate future endpoint and page calls for the next seven days.
 function handleLoginSubmit() {
-	$('#enterApp').click(function(e) {
+	$(document).on('click', '#enterApp', function(event) {
+		event.preventDefault();
 		console.log ('submitLogIn');
-		e.preventDefault();
 		const uname = $('#logIn-username').val();
 		const pword = $('#logIn-password').val();
 

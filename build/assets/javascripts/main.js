@@ -475,12 +475,12 @@ function createTripPost(name, city, username, tripLength) {
               method: 'DELETE',
             })
             .done(function(data) {
-              // console.log('success');
+              console.log('success deleted item');
             })
             .fail(function (jqXHR, error, errorThrown) {
-              // console.log(jqXHR);
-              // console.log(error);
-              // console.log(errorThrown);
+              console.log(jqXHR);
+              console.log(error);
+              console.log(errorThrown);
               const alertError = 'Error encountered in DELETE.';
               alertUser(alertError);
             })
@@ -497,8 +497,16 @@ function createTripPost(name, city, username, tripLength) {
               data: `checked=${checked}`,
             })
             .done(function(data) {
-              // console.log('success');
+              console.log('success updated checked item');
             })
+            .fail(function (jqXHR, error, errorThrown) {
+              console.log(jqXHR);
+              console.log(error);
+              console.log(errorThrown);
+              const alertError = 'Error encountered in DELETE.';
+              alertUser(alertError);
+            })
+            
       }
 
   
@@ -622,13 +630,16 @@ function createTripPost(name, city, username, tripLength) {
 
     // landing listeners
 
-    $('#signUp-button').click(function() {
+    $(document).on('click', '#signUp-button', function(event) {
+      event.preventDefault();
       // console.log('signUp');
       $('.landing').addClass('hidden');
       $('.signUp').removeClass('hidden');
     });
 
-    $('#logIn-button').click(function() {
+    // Example Event Delegation for REACT*****
+    $(document).on('click', '#logIn-button', function(event) {
+      event.preventDefault();
       // console.log('logIn');
       $('.landing').addClass('hidden');
       $('.logIn').removeClass('hidden');
@@ -636,13 +647,15 @@ function createTripPost(name, city, username, tripLength) {
 
     // signUp listeners
 
-    $('#cancel').click(function() {
+    $(document).on('click', '#cancel', function(event) {
+      event.preventDefault();
       // console.log('signUp');
       $('.signUp').addClass('hidden');
       $('.landing').removeClass('hidden');
     });
 
-    $('#toLogIn').click(function() {
+    $(document).on('click', '#toLogIn', function(event) {
+      event.preventDefault();
       // console.log('signUp');
       $('.signUp').addClass('hidden');
       $('.logIn').removeClass('hidden');
@@ -650,13 +663,15 @@ function createTripPost(name, city, username, tripLength) {
 
     // logIn listeners
 
-    $('#cancelLogIn').click(function() {
+    $(document).on('click', '#cancelLogIn', function(event) {
+      event.preventDefault();
       // console.log('signUp');
       $('.logIn').addClass('hidden');
       $('.landing').removeClass('hidden');
     });
 
-    $('#toSignUp').click(function() {
+    $(document).on('click', '#toSignUp', function(event) {
+      event.preventDefault();
       // console.log('signUp');
       $('.logIn').addClass('hidden');
       $('.signUp').removeClass('hidden');
@@ -664,20 +679,22 @@ function createTripPost(name, city, username, tripLength) {
 
     // profile listeners
 
-    $('#newTrip').click(function() {
+    $(document).on('click', '#newTrip', function(event) {
+      event.preventDefault();
       // console.log('newTripForm');
       $('.profile').addClass('hidden');
       $('.newTrip').removeClass('hidden');
     });
 
-    $('#tripList').on('click', 'a', function(e) {
-      e.preventDefault();
+    $(document).on('click', '#tripList a', function(event) {
+      event.preventDefault();
       const name = $(this).text();
       // console.log(name);
       getTrip(name);
     })
 
-    $('#tripList').on('click', '.deleteTrip', function(event) {
+    $(document).on('click', '#tripList .deleteTrip', function(event) {
+      event.preventDefault();
       // console.log('delete');
       const tripName = $(this).parent('li').find('a').html();
       
@@ -688,8 +705,8 @@ function createTripPost(name, city, username, tripLength) {
 
     // newTrip listeners 
 
-    $('#createTrip').click(function(e) {
-      e.preventDefault();
+    $(document).on('click', '#createTrip', function(event) {
+      event.preventDefault();
       const name = $('#tripName').val();
       const city = $('#tripLocation').val();
       if (name === '') {
@@ -721,7 +738,8 @@ function createTripPost(name, city, username, tripLength) {
       }
     });
 
-    $('#cancelTrip').click(function() {
+    $(document).on('click', '#cancelTrip', function(event) {
+      event.preventDefault();
       // console.log('signUp');
       $('.newTrip').addClass('hidden');
       $('.profile').removeClass('hidden');
@@ -729,7 +747,8 @@ function createTripPost(name, city, username, tripLength) {
 
     // activitySelection listeners
 
-    $('#viewPlanner').click(function() {
+    $(document).on('click', '#viewPlanner', function(event) {
+      event.preventDefault();
       // console.log('viewTravelPlanner');
       $('.activitySelection').addClass('hidden');
       $('.tripPlanner').removeClass('hidden');
@@ -737,7 +756,8 @@ function createTripPost(name, city, username, tripLength) {
       $('.navList-planner').removeClass('hidden');
     });
 
-    $('#createPackList').click(function() {
+    $(document).on('click', '#createPackList', function(event) {
+      event.preventDefault();
       // console.log('createPackingList');
       $('.activitySelection').addClass('hidden');
       $('.packingList').removeClass('hidden');
@@ -747,7 +767,8 @@ function createTripPost(name, city, username, tripLength) {
 
     // tripPlanner listeners
 
-    $('.tripPlanner').on('click', '.dayContainer', function() {
+    $(document).on('click', '.tripPlanner .dayContainer', function(event) {
+      event.preventDefault();
       // console.log('dayView');
       let element = $(this).attr('class');
       element = element.replace(/\D/g,'');
@@ -765,7 +786,9 @@ function createTripPost(name, city, username, tripLength) {
     // nav listeners
 
 // activity Nav
-    $('#profileNav-activity').click(function() {
+
+    $(document).on('click', '#profileNav-activity', function(event) {
+      event.preventDefault();
       // console.log('toProfile');
       $('.activitySelection').addClass('hidden');
       $('.navList-activity').addClass('hidden');
@@ -776,7 +799,8 @@ function createTripPost(name, city, username, tripLength) {
       $('.hikeContainer').empty();
     });
 
-    $('#plannerNav-activity').click(function() {
+    $(document).on('click', '#plannerNav-activity', function(event) {
+      event.preventDefault();
       // console.log('toPlanner');
       $('.activitySelection').addClass('hidden');
       $('.navList-activity').addClass('hidden');
@@ -784,7 +808,8 @@ function createTripPost(name, city, username, tripLength) {
       $('.navList-planner').removeClass('hidden');
     });
 
-    $('#packingNav-activity').click(function() {
+    $(document).on('click', '#packingNav-activity', function(event) {
+      event.preventDefault();
       // console.log('toPacking');
       $('.activitySelection').addClass('hidden');
       $('.navList-activity').addClass('hidden');
@@ -794,7 +819,8 @@ function createTripPost(name, city, username, tripLength) {
 
     // planner Nav
 
-    $('#profileNav-planner').click(function() {
+    $(document).on('click', '#profileNav-planner', function(event) {
+      event.preventDefault();
       // console.log('toProfile');
       $('.tripPlanner').addClass('hidden');
       $('.navList-planner').addClass('hidden');
@@ -805,7 +831,8 @@ function createTripPost(name, city, username, tripLength) {
       $('.hikeContainer').empty();
     });
 
-    $('#activityNav-planner').click(function() {
+    $(document).on('click', '#activityNav-planner', function(event) {
+      event.preventDefault();
       // console.log('toActivity');
       $('.tripPlanner').addClass('hidden');
       $('.navList-planner').addClass('hidden');
@@ -813,7 +840,8 @@ function createTripPost(name, city, username, tripLength) {
       $('.navList-activity').removeClass('hidden');
     });
 
-    $('#packingNav-planner').click(function() {
+    $(document).on('click', '#packingNav-planner', function(event) {
+      event.preventDefault();
       // console.log('toPacking');
       $('.tripPlanner').addClass('hidden');
       $('.navList-planner').addClass('hidden');
@@ -823,7 +851,8 @@ function createTripPost(name, city, username, tripLength) {
 
     // day Nav
 
-    $('#profileNav-day').click(function() {
+    $(document).on('click', '#profileNav-day', function(event) {
+      event.preventDefault();
       // console.log('toProfile');
       $('.dayView').addClass('hidden');
       $('.navList-day').addClass('hidden');
@@ -838,7 +867,8 @@ function createTripPost(name, city, username, tripLength) {
       }
     });
 
-    $('#activityNav-day').click(function() {
+    $(document).on('click', '#activityNav-day', function(event) {
+      event.preventDefault();
       // console.log('toActivity');
       $('.dayView').addClass('hidden');
       $('.navList-day').addClass('hidden');
@@ -850,7 +880,8 @@ function createTripPost(name, city, username, tripLength) {
       }
     });
 
-    $('#packingNav-day').click(function() {
+    $(document).on('click', '#packingNav-day', function(event) {
+      event.preventDefault();
       // console.log('toPacking');
       $('.dayView').addClass('hidden');
       $('.navList-day').addClass('hidden');
@@ -862,7 +893,8 @@ function createTripPost(name, city, username, tripLength) {
       }
     });
 
-    $('#plannerNav-day').click(function() {
+    $(document).on('click', '#plannerNav-day', function(event) {
+      event.preventDefault();
       // console.log('toPacking');
       $('.dayView').addClass('hidden');
       $('.navList-day').addClass('hidden');
@@ -876,7 +908,8 @@ function createTripPost(name, city, username, tripLength) {
 
     // packing Nav
 
-    $('#profileNav-packing').click(function() {
+    $(document).on('click', '#profileNav-packing', function(event) {
+      event.preventDefault();
       // console.log('toProfile');
       $('.packingList').addClass('hidden');
       $('.navList-packing').addClass('hidden');
@@ -887,7 +920,8 @@ function createTripPost(name, city, username, tripLength) {
       $('.hikeContainer').empty();
     });
 
-    $('#activityNav-packing').click(function() {
+    $(document).on('click', '#activityNav-packing', function(event) {
+      event.preventDefault();
       // console.log('toActivity');
       $('.packingList').addClass('hidden');
       $('.navList-packing').addClass('hidden');
@@ -895,7 +929,8 @@ function createTripPost(name, city, username, tripLength) {
       $('.navList-activity').removeClass('hidden');
     });
 
-    $('#plannerNav-packing').click(function() {
+    $(document).on('click', '#plannerNav-packing', function(event) {
+      event.preventDefault();
       // console.log('toPacking');
       $('.packingList').addClass('hidden');
       $('.navList-packing').addClass('hidden');
@@ -904,8 +939,8 @@ function createTripPost(name, city, username, tripLength) {
     });
 
     // activitySearchTriggers
-    $('.activityContainer').on('click', '#activitySearch-button', function(e) {
-      e.preventDefault();
+    $(document).on('click', '.activityContainer #activitySearch-button', function(event) {
+      event.preventDefault();
       const keyword = $('#activitySearch-input').val();
       const lat = +localStorage.getItem('lat');
       // const lat = +store.latitude;
@@ -920,8 +955,8 @@ function createTripPost(name, city, username, tripLength) {
     })
 
     // restaurants
-    $('.restaurantContainer').on('click', '#addToPlanner', function(e) {
-      e.preventDefault();
+    $(document).on('click', '.restaurantContainer #addToPlanner', function(event) {
+      event.preventDefault();
       let daySelected = $(this).parent('.restaurantResults').find('select').val();
       daySelected = daySelected.replace(/\D/g,'');
       daySelected = `.day${daySelected}`;
@@ -941,8 +976,8 @@ function createTripPost(name, city, username, tripLength) {
 
     // search
 
-    $('.activityResultsContainer').on('click', '#addToPlanner', function(e) {
-      e.preventDefault();
+    $(document).on('click', '.activityResultsContainer #addToPlanner', function(event) {
+      event.preventDefault();
       let daySelected = $(this).parent('.activityResults').find('select').val();
       daySelected = daySelected.replace(/\D/g,'');
       daySelected = `.day${daySelected}`;
@@ -963,8 +998,8 @@ function createTripPost(name, city, username, tripLength) {
 
     // hiking
 
-    $('.hikeContainer').on('click', '#addToPlanner', function(e) {
-      e.preventDefault();
+    $(document).on('click', '.hikeContainer #addToPlanner', function(event) {
+      event.preventDefault();
       let daySelected = $(this).parent('.hikeResults').find('select').val();
       daySelected = daySelected.replace(/\D/g,'');
       daySelected = `.day${daySelected}`;
@@ -987,8 +1022,8 @@ function createTripPost(name, city, username, tripLength) {
     // dayViewTriggers
 
     // deleteEvent
-    $('.dayView').on('click', '.button-delete', function(e) {
-      e.preventDefault();
+    $(document).on('click', '.dayView .button-delete', function(event) {
+      event.preventDefault();
       let day = $(this).parent('.dayActivity').parent('.activities').parent('.dayPage').find('.dayHeader').text();
       day = day = day.replace(/\D/g,'');
       const activityName = $(this).parent('.dayActivity').find('a').text();
@@ -999,8 +1034,8 @@ function createTripPost(name, city, username, tripLength) {
       activityCount(`.day${day}`);
     })
 
-    $('.dayView').on('click', '.button-notes', function(e) {
-      e.preventDefault();
+    $(document).on('click', '.dayView .button-notes', function(event) {
+      event.preventDefault();
       let day = $(this).parent('.dayActivity').parent('.activities').parent('.dayPage').find('.dayHeader').text();
       day = day = day.replace(/\D/g,'');
       const activityName = $(this).parent('.dayActivity').find('a').text();
@@ -1016,8 +1051,9 @@ function createTripPost(name, city, username, tripLength) {
 
     // packingListTriggers
 
-    $('.itemList').on('click', '.delete', function(event) {
-      // console.log('delete');
+    $(document).on('click', '.itemList .delete', function(event) {
+      event.preventDefault();
+      console.log('delete');
       const itemName = $(this).parent('.items').text();
       let category = $(this).parent('.items').parent('.itemList').attr('class');
       category = category.replace('itemList ','');
@@ -1027,7 +1063,8 @@ function createTripPost(name, city, username, tripLength) {
       deletePackingListItem(itemName, category);
     });
 
-    $('.button-addItem').click(function() {
+    $(document).on('click', '.button-addItem', function(event) {
+      event.preventDefault();
       const itemAdded = $(this).parent('.listBox').find('.itemToAdd').val();
       if (itemAdded === '') {
         alert('Item input field cannot be blank');
@@ -1043,7 +1080,9 @@ function createTripPost(name, city, username, tripLength) {
       }
     });
 
-    $('.itemList').on('click', 'input', function() {
+    $(document).on('click', '.itemList input', function(event) {
+      console.log('checkItem');
+      event.preventDefault();
       let checked = $(this).parent('label').parent('.items').find('input');
       if (checked.is(":checked")) {
             // console.log(true);
@@ -1066,13 +1105,15 @@ function createTripPost(name, city, username, tripLength) {
 
     // key listeners
 
-    $('.activityContainer').on('keyup', '#activitySearch-input', function(event) {
+    $(document).on('keyup', '.activityContainer #activitySearch-input', function(event) {
+      event.preventDefault();
       if (event.keyCode === 13) {
         $('#activitySearch-button').click();
       }
     });
 
-    $('.tripPlanner').on('keyup', '.dayContainer', function(event) {
+    $(document).on('keyup', '.tripPlanner .dayContainer', function(event) {
+      event.preventDefault();
       if (event.keyCode === 13) {
        
         // console.log('dayView');
@@ -1090,8 +1131,9 @@ function createTripPost(name, city, username, tripLength) {
       }
     });
 
-    $('.itemList').on('keyup', '.delete', function() {
-      // console.log('delete');
+    $(document).on('keyup', '.itemList .delete', function(event) {
+      event.preventDefault();
+      console.log('delete');
       if (event.keyCode === 13) {
         const itemName = $(this).parent('.items').text();
         let category = $(this).parent('.items').parent('.itemList').attr('class');
@@ -1108,6 +1150,6 @@ function createTripPost(name, city, username, tripLength) {
   
   $(function() {
     handleEventListeners();
-    $(".fadeOutHeader").fadeOut(15000);
+    $(".fadeOutHeader").fadeOut(18000);
     });
 
