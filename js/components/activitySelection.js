@@ -29,7 +29,7 @@ export default function ActivitySelection(props) {
                             <h2>Activities/Places to Stay</h2>
                             <div className="activityContainer">
                                     <label htmlFor="search"></label>
-                                    <input name="search" id="activitySearch-input" type="text" aria-label="Enter what you would like to search for in this city" placeholder="search" required />
+                                    <input name="search" id="activitySearch-input" type="text" aria-label="Enter what you would like to search for in this city" placeholder="search for anything" required />
                                     <button id="activitySearch-button" type="submit">Search</button>
                                     <div aria-label="Activity search results in the area" aria-live="assertive" className="activityResultsContainer">
                                     <h2 className="searchMessage">Searching...</h2>

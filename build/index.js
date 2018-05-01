@@ -67086,7 +67086,7 @@
 	                                        'div',
 	                                        { className: 'activityContainer' },
 	                                        _react2.default.createElement('label', { htmlFor: 'search' }),
-	                                        _react2.default.createElement('input', { name: 'search', id: 'activitySearch-input', type: 'text', 'aria-label': 'Enter what you would like to search for in this city', placeholder: 'search', required: true }),
+	                                        _react2.default.createElement('input', { name: 'search', id: 'activitySearch-input', type: 'text', 'aria-label': 'Enter what you would like to search for in this city', placeholder: 'search for anything', required: true }),
 	                                        _react2.default.createElement(
 	                                                'button',
 	                                                { id: 'activitySearch-button', type: 'submit' },

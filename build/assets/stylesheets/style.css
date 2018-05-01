@@ -42,7 +42,7 @@ button:hover {
 }
 
 a {
-  padding-left: 5px;
+  padding-right: 10px;
   color: lightseagreen;
 }
 
@@ -475,6 +475,10 @@ span {
 
 .packingList button {
   margin-left: 10px;
+}
+
+input[type='checkbox'] { 
+  cursor: pointer;
 }
 
 /* footer */

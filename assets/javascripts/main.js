@@ -123,15 +123,15 @@ function renderRestaurantResults(items, index) {
   const type = items.restaurant.cuisines;
   const rating = items.restaurant.user_rating.aggregate_rating;
 
-  let restaurantResults = '<div tabindex=1 class="restaurantResults">';
-  restaurantResults += `<p tabindex=1>Name: <span id="restaurantName"><a href="${restaurantURL}" target="_blank" tabindex=1>${restaurantName}</a></span></p>`;
-  restaurantResults += `<p tabindex=1>Rating: <span>${rating}/5</span></p>`;
-  restaurantResults += `<p tabindex=1>Type: <span>${type}</span></p>`;
-  restaurantResults += `<p tabindex=1>Address: <span id="restaurantAddress">${restaurantAddress}</span></p>`;
-  restaurantResults += '<select tabindex=1 class="dayDropDown" name="days">';
+  let restaurantResults = '<div class="restaurantResults">';
+  restaurantResults += `<p>Name: <span id="restaurantName"><a href="${restaurantURL}" target="_blank">${restaurantName}</a></span></p>`;
+  restaurantResults += `<p>Rating: <span>${rating}/5</span></p>`;
+  restaurantResults += `<p>Type: <span>${type}</span></p>`;
+  restaurantResults += `<p>Address: <span id="restaurantAddress">${restaurantAddress}</span></p>`;
+  restaurantResults += '<select class="dayDropDown" name="days">';
             
   restaurantResults += '</select>'
-  restaurantResults += '<button tabindex=1 id="addToPlanner"type="submit">Add to Planner</button>';
+  restaurantResults += '<button id="addToPlanner"type="submit">Add to Planner</button>';
   restaurantResults += '</div>';
 return restaurantResults;
 }
@@ -170,16 +170,16 @@ function renderHikingTrailsResults(trail, index) {
     difficulty = "moderately easy";
   }
 
-  let hikingTrailsResults = '<div tabindex=1 class="hikeResults">';
-  hikingTrailsResults += `<p tabindex=1>Name: <span id="trailName"><a href="${trailsURL}" target="_blank" tabindex=1>${trailsName}</a></span></p>`;
-  hikingTrailsResults += `<p tabindex=1>Length: <span>${length} miles</span></p>`;
-  hikingTrailsResults += `<p tabindex=1>Difficulty: <span>${difficulty}</span></p>`;
-  hikingTrailsResults += `<p tabindex=1>Rating: <span>${trailRating}/5</span></p>`;
-  hikingTrailsResults += `<p tabindex=1>Location: <span id="trailLocation">${trailLocation}</span></p>`;
-  hikingTrailsResults += '<select tabindex=1 class="dayDropDown" name="days">';
+  let hikingTrailsResults = '<div class="hikeResults">';
+  hikingTrailsResults += `<p>Name: <span id="trailName"><a href="${trailsURL}" target="_blank">${trailsName}</a></span></p>`;
+  hikingTrailsResults += `<p>Length: <span>${length} miles</span></p>`;
+  hikingTrailsResults += `<p>Difficulty: <span>${difficulty}</span></p>`;
+  hikingTrailsResults += `<p>Rating: <span>${trailRating}/5</span></p>`;
+  hikingTrailsResults += `<p>Location: <span id="trailLocation">${trailLocation}</span></p>`;
+  hikingTrailsResults += '<select class="dayDropDown" name="days">';
 
   hikingTrailsResults += '</select>';
-  hikingTrailsResults += '<button tabindex=1 id="addToPlanner" type="submit">Add to Planner</button>';       
+  hikingTrailsResults += '<button id="addToPlanner" type="submit">Add to Planner</button>';       
   hikingTrailsResults += '</div>';
 return hikingTrailsResults;
 }
@@ -204,10 +204,10 @@ function renderWeatherResults(forecast, index) {
   const currentDate = myDate.toLocaleString('en-US', options);
  
   const weatherResults = `<div class="weatherContainer">
-    <h3 tabindex=1>${currentDate}</h3>
+    <h3>${currentDate}</h3>
     <img src="https://developer.accuweather.com/sites/default/files/${weatherIcon}-s.png"/>
-    <p tabindex=1>High: <span>${high}</span></p>
-    <p tabindex=1>Low: <span>${low}</span></p>
+    <p>High: <span>${high}</span></p>
+    <p>Low: <span>${low}</span></p>
     </div>`;
 return weatherResults;
 }
@@ -446,7 +446,7 @@ function createTripPost(name, city, username, tripLength) {
         $.getJSON(packingListURL, function(items) {
           const itemList = items.map(function(item) {
             const newItem = 
-            `<div class="items"><label><input tabindex=1 type="checkbox" name="${item.itemName}">${item.itemName}</label> <div tabindex=1 aria-label="select to delete ${item.itemName} from list" class="delete"><i class="fa fa-close"></i></div><br></div>`;
+            `<div class="items"><label><input type="checkbox" name="${item.itemName}" />${item.itemName}</label> <div aria-label="select to delete ${item.itemName} from list" class="delete"><i class="fa fa-close"></i></div><br /></div>`;
             const itemClass = `.${item.category}`;
             $(itemClass).append(newItem);
             if (item.checked === 'on') {
@@ -560,8 +560,8 @@ function createTripPost(name, city, username, tripLength) {
     let dayContainer = '';
     for (let i = 1; i <= days; i++) {
       dayContainer += `<div class="dayContainer plannerDay${i}">
-            <h3 tabindex=1 >Day ${i}</h3>
-            <p tabindex=1 >0 activities saved</p>
+            <h3 >Day ${i}</h3>
+            <p >0 activities saved</p>
         </div>`;
     }
     $('.plannerDays').html(dayContainer);
@@ -574,7 +574,7 @@ function createTripPost(name, city, username, tripLength) {
     const name = store.tripName;
     let dayView = '';
     for (let i = 1; i <= days; i++) {
-      dayView += `<div class="dayPage day${i} hidden"><h1 tabindex=1 class="dayHeader">${name} (Day ${i})</h1>
+      dayView += `<div class="dayPage day${i} hidden"><h1 class="dayHeader">${name} (Day ${i})</h1>
       <div class="activities">
         <h3 class="noActivities">No activities added to this day.  Go to Activity Selection Page to add activities.</h3>
       </div>
@@ -587,22 +587,22 @@ function createTripPost(name, city, username, tripLength) {
     let dayViewContent = '';
     if (url === undefined) {
       dayViewContent = `<div class="dayActivity">
-      <h2 tabindex=1>${name}</h2>
-      <p tabindex=1>${address}</p><br>
-      <button tabindex=1 class="button-delete" type="button">Delete</button>
-      <textarea tabindex=1 rows="4" cols="50" class="notesInput">${notes} 
+      <h2>${name}</h2>
+      <p>${address}</p><br />
+      <button class="button-delete" type="button">Delete</button>
+      <textarea rows="4" cols="50" class="notesInput">${notes} 
       </textarea>
-      <button tabindex=1 class="button-notes" type="button">Save Notes</button>
+      <button class="button-notes" type="button">Save Notes</button>
       </div>`
     }
     else {
       dayViewContent = `<div class="dayActivity">
-      <h2><a href="${url}" target="_blank" tabindex=1>${name}</a></h2>
-      <p tabindex=1>${address}</p><br>
-      <button tabindex=1 class="button-delete" type="button">Delete</button>
-      <textarea tabindex=1 rows="4" cols="50" class="notesInput">${notes} 
+      <h2><a href="${url}" target="_blank">${name}</a></h2>
+      <p>${address}</p><br />
+      <button class="button-delete" type="button">Delete</button>
+      <textarea rows="4" cols="50" class="notesInput">${notes} 
       </textarea>
-      <button tabindex=1 class="button-notes" type="button">Save Notes</button>
+      <button class="button-notes" type="button">Save Notes</button>
       </div>`
     }
 
@@ -1073,7 +1073,7 @@ function createTripPost(name, city, username, tripLength) {
         alert(`${itemAdded} added successfully`);
         const category = $(this).parent('.listBox').parent('.packListContainer').find('.packListHeaders').text();
         // console.log(itemAdded);
-        const newItem = `<div class="items"><label><input type="checkbox">${itemAdded}</label> <div class="delete"><i class="fa fa-close"></i></div><br></div>`;
+        const newItem = `<div class="items"><label><input type="checkbox" />${itemAdded}</label> <div class="delete"><i class="fa fa-close"></i></div><br /></div>`;
         $(this).parent('.listBox').find('.itemList').prepend(newItem);
         $(this).parent('.listBox').find('.itemToAdd').val('');
         postItemToPackingList(itemAdded, category);
