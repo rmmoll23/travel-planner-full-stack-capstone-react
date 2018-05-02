@@ -446,12 +446,12 @@ function createTripPost(name, city, username, tripLength) {
         $.getJSON(packingListURL, function(items) {
           const itemList = items.map(function(item) {
             const newItem = 
-            `<div class="items"><label><input type="checkbox" name="${item.itemName}" />${item.itemName}</label> <div aria-label="select to delete ${item.itemName} from list" class="delete"><i class="fa fa-close"></i></div><br /></div>`;
+            `<div class="items"><label><input type="checkbox" name="${item.itemName}">${item.itemName}</label><div aria-label="select to delete ${item.itemName} from list" class="delete"><i class="fa fa-close"></i></div><br></div>`;
             const itemClass = `.${item.category}`;
             $(itemClass).append(newItem);
             if (item.checked === 'on') {
               // console.log(item.itemName);
-              $(`input[name='${item.itemName}']`).prop('checked', true);;
+              $(`input[name='${item.itemName}']`).prop('checked', true);
             }
           });
 
@@ -487,6 +487,7 @@ function createTripPost(name, city, username, tripLength) {
       }
 
       function updatePackingListItem(itemName, category, checked) {
+        console.log(checked);
         const username = store.username;
         const tripName = store.tripName;
         const item = itemName.trim();
@@ -588,7 +589,7 @@ function createTripPost(name, city, username, tripLength) {
     if (url === undefined) {
       dayViewContent = `<div class="dayActivity">
       <h2>${name}</h2>
-      <p>${address}</p><br />
+      <p>${address}</p><br>
       <button class="button-delete" type="button">Delete</button>
       <textarea rows="4" cols="50" class="notesInput">${notes} 
       </textarea>
@@ -598,7 +599,7 @@ function createTripPost(name, city, username, tripLength) {
     else {
       dayViewContent = `<div class="dayActivity">
       <h2><a href="${url}" target="_blank">${name}</a></h2>
-      <p>${address}</p><br />
+      <p>${address}</p><br>
       <button class="button-delete" type="button">Delete</button>
       <textarea rows="4" cols="50" class="notesInput">${notes} 
       </textarea>
@@ -1073,23 +1074,22 @@ function createTripPost(name, city, username, tripLength) {
         alert(`${itemAdded} added successfully`);
         const category = $(this).parent('.listBox').parent('.packListContainer').find('.packListHeaders').text();
         // console.log(itemAdded);
-        const newItem = `<div class="items"><label><input type="checkbox" />${itemAdded}</label> <div class="delete"><i class="fa fa-close"></i></div><br /></div>`;
+        const newItem = `<div class="items"><label><input type="checkbox">${itemAdded}</label><div class="delete"><i class="fa fa-close"></i></div><br></div>`;
         $(this).parent('.listBox').find('.itemList').prepend(newItem);
         $(this).parent('.listBox').find('.itemToAdd').val('');
         postItemToPackingList(itemAdded, category);
       }
     });
 
-    $(document).on('click', '.itemList input', function(event) {
+    $(document).on('click', '.itemList input', function() {
       console.log('checkItem');
-      event.preventDefault();
       let checked = $(this).parent('label').parent('.items').find('input');
       if (checked.is(":checked")) {
-            // console.log(true);
+            console.log(true);
             checked = 'on';
           }
       else {
-            // console.log(false);
+            console.log(false);
             checked = 'off';
           }
 
