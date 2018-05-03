@@ -80,23 +80,19 @@
 	
 	var _logIn2 = _interopRequireDefault(_logIn);
 	
-	var _newTrip = __webpack_require__(552);
-	
-	var _newTrip2 = _interopRequireDefault(_newTrip);
-	
-	var _packingList = __webpack_require__(553);
+	var _packingList = __webpack_require__(552);
 	
 	var _packingList2 = _interopRequireDefault(_packingList);
 	
-	var _profile = __webpack_require__(554);
+	var _profile = __webpack_require__(553);
 	
 	var _profile2 = _interopRequireDefault(_profile);
 	
-	var _signUp = __webpack_require__(555);
+	var _signUp = __webpack_require__(554);
 	
 	var _signUp2 = _interopRequireDefault(_signUp);
 	
-	var _tripPlanner = __webpack_require__(556);
+	var _tripPlanner = __webpack_require__(555);
 	
 	var _tripPlanner2 = _interopRequireDefault(_tripPlanner);
 	
@@ -105,6 +101,9 @@
 	var render = _reactDom2.default.render;
 	
 	// import '../assets/css/main.css';
+	
+	// import NewTrip from '../js/components/newTrip';
+	
 	
 	document.addEventListener('DOMContentLoaded', function () {
 	  return _reactDom2.default.render(_react2.default.createElement(_nav2.default, null), document.getElementById('reactNav'));
@@ -130,9 +129,9 @@
 	  return _reactDom2.default.render(_react2.default.createElement(_logIn2.default, null), document.getElementById('reactLogIn'));
 	});
 	
-	document.addEventListener('DOMContentLoaded', function () {
-	  return _reactDom2.default.render(_react2.default.createElement(_newTrip2.default, null), document.getElementById('reactNewTrip'));
-	});
+	// document.addEventListener('DOMContentLoaded', () =>
+	// 	{return ReactDOM.render(<NewTrip />,
+	//         document.getElementById('reactNewTrip'));} );
 	
 	document.addEventListener('DOMContentLoaded', function () {
 	  return _reactDom2.default.render(_react2.default.createElement(_packingList2.default, null), document.getElementById('reactPackingList'));
@@ -67442,101 +67441,6 @@
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports.default = NewTrip;
-	
-	__webpack_require__(58);
-	
-	__webpack_require__(126);
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactDom = __webpack_require__(12);
-	
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-	
-	var _enzyme = __webpack_require__(128);
-	
-	var _enzymeAdapterReact = __webpack_require__(525);
-	
-	var _enzymeAdapterReact2 = _interopRequireDefault(_enzymeAdapterReact);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	(0, _enzyme.configure)({ adapter: new _enzymeAdapterReact2.default() });
-	
-	function NewTrip(props) {
-	    return _react2.default.createElement(
-	        'main',
-	        { role: 'main', className: 'newTrip hidden' },
-	        _react2.default.createElement(
-	            'form',
-	            null,
-	            _react2.default.createElement(
-	                'div',
-	                { className: 'container' },
-	                _react2.default.createElement(
-	                    'h1',
-	                    null,
-	                    'Create new trip'
-	                ),
-	                _react2.default.createElement(
-	                    'label',
-	                    { htmlFor: 'tripName' },
-	                    'Name of trip'
-	                ),
-	                _react2.default.createElement('input', { 'aria-label': 'Enter name of trip', type: 'text', id: 'tripName', placeholder: 'Enter name of trip', name: 'tripName', required: true }),
-	                _react2.default.createElement('br', null),
-	                _react2.default.createElement('br', null),
-	                _react2.default.createElement(
-	                    'label',
-	                    { htmlFor: 'city' },
-	                    'Location'
-	                ),
-	                _react2.default.createElement('input', { 'aria-label': 'Enter city of trip', type: 'text', id: 'tripLocation', placeholder: 'Enter city: \'Austin, TX\' or \'London, UK\'', name: 'city', required: true }),
-	                _react2.default.createElement('br', null),
-	                _react2.default.createElement('br', null),
-	                _react2.default.createElement(
-	                    'label',
-	                    { htmlFor: 'from' },
-	                    'Start Date'
-	                ),
-	                _react2.default.createElement('input', { 'aria-label': 'Enter start date of trip', type: 'text', id: 'from', name: 'from', placeholder: 'Enter trip start date', readOnly: 'true' }),
-	                _react2.default.createElement('br', null),
-	                _react2.default.createElement('br', null),
-	                _react2.default.createElement(
-	                    'label',
-	                    { htmlFor: 'to' },
-	                    'End Date'
-	                ),
-	                _react2.default.createElement('input', { 'aria-label': 'Enter end date of trip', type: 'text', id: 'to', name: 'to', placeholder: 'Enter trip end date', readOnly: 'true' }),
-	                _react2.default.createElement('br', null),
-	                _react2.default.createElement('br', null),
-	                _react2.default.createElement(
-	                    'button',
-	                    { id: 'cancelTrip', className: 'button-left', type: 'button' },
-	                    'Cancel'
-	                ),
-	                _react2.default.createElement(
-	                    'button',
-	                    { id: 'createTrip', className: 'button-right', type: 'submit' },
-	                    'Submit'
-	                )
-	            )
-	        )
-	    );
-	}
-
-/***/ }),
-/* 553 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
 	        value: true
 	});
 	exports.default = PackingList;
@@ -67696,7 +67600,7 @@
 	}
 
 /***/ }),
-/* 554 */
+/* 553 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -67757,7 +67661,7 @@
 	}
 
 /***/ }),
-/* 555 */
+/* 554 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -67867,7 +67771,7 @@
 	}
 
 /***/ }),
-/* 556 */
+/* 555 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
