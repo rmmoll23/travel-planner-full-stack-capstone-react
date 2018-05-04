@@ -376,9 +376,10 @@ span {
   min-width: 100px;
   max-width: 350px;
   background-color: white;
+  cursor: pointer;
 }
 
-.dayContainer:hover {
+.dayContainer {
   cursor: pointer;
 }
 
