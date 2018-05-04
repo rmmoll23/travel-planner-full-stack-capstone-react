@@ -393,6 +393,7 @@ span {
 .noActivities {
   margin-bottom: 50px;
   border-bottom: none;
+  width: auto;
 }
 
 .dayHeader {
