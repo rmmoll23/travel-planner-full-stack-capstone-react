@@ -21979,6 +21979,11 @@
 	            '\xA0 \xA0Travel Planner'
 	        ),
 	        _react2.default.createElement(
+	            'button',
+	            { id: 'logIn-button', type: 'button' },
+	            'Log In'
+	        ),
+	        _react2.default.createElement(
 	            'ul',
 	            { className: 'navList-activity hidden' },
 	            _react2.default.createElement(
@@ -67279,6 +67284,11 @@
 	                                'h2',
 	                                { 'aria-label': 'All of your traveling needs in one place', className: 'fadeOutHeader' },
 	                                'All of your traveling needs in one place'
+	                        ),
+	                        _react2.default.createElement(
+	                                'button',
+	                                { id: 'signUp-button', type: 'button' },
+	                                'Sign Up'
 	                        )
 	                ),
 	                _react2.default.createElement(
@@ -67307,16 +67317,6 @@
 	                                        { 'aria-label': 'Make a packing list' },
 	                                        'Make a packing list'
 	                                )
-	                        ),
-	                        _react2.default.createElement(
-	                                'button',
-	                                { id: 'signUp-button', className: 'button-left', type: 'button' },
-	                                'Sign Up'
-	                        ),
-	                        _react2.default.createElement(
-	                                'button',
-	                                { id: 'logIn-button', className: 'button-right', type: 'button' },
-	                                'Log In'
 	                        )
 	                )
 	        );

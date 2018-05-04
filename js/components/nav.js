@@ -14,6 +14,7 @@ export default function Nav(props) {
 		
         <nav role="navigation">
                 <h1><img className="logo" src="assets/stylesheets/images/globeIcon.png" />&nbsp; &nbsp;Travel Planner</h1>
+                <button id="logIn-button" type="button">Log In</button>
                 <ul className="navList-activity hidden">
                     <li><a id="profileNav-activity" href="#">Profile Page</a></li>
                     <li><a id="packingNav-activity" href="#">Packing List</a></li>
