@@ -253,6 +253,7 @@ function createTripPost(name, city, username, tripLength) {
         $('#tripLocation').val('');
         $('#from').val('');
         $('to').val('');
+        $('#noTrips').addClass('hidden');
         $('#tripList').append(`<li><a href="#">${result.tripName}</a><div title="delete trip" class="deleteTrip"><i class="fa fa-close"></i></div></li>`);
         $('.newTrip').addClass('hidden');
         $('.activitySelection').removeClass('hidden');
@@ -269,7 +270,13 @@ function createTripPost(name, city, username, tripLength) {
               `<li><a href="#">${trip.tripName}</a><div title="delete trip" class="deleteTrip"><i class="fa fa-close"></i></div></li>`;
             return tripListTemplate;
           })
-          $('#tripList').append(tripList);
+          console.log(tripList);
+          if (tripList.length === 0) {
+            $('#noTrips').removeClass('hidden');
+          }
+          else {
+            $('#tripList').append(tripList);
+          }
         });
       }
 
@@ -1071,7 +1078,7 @@ function createTripPost(name, city, username, tripLength) {
         alert('Item input field cannot be blank');
       }
       else {
-        alert(`${itemAdded} added successfully`);
+        console.log(`${itemAdded} added successfully`);
         const category = $(this).parent('.listBox').parent('.packListContainer').find('.packListHeaders').text();
         // console.log(itemAdded);
         const newItem = `<div class="items"><label><input type="checkbox">${itemAdded}</label><div class="delete"><i class="fa fa-close"></i></div><br></div>`;

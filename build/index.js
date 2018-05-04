@@ -100,10 +100,6 @@
 	
 	var render = _reactDom2.default.render;
 	
-	// import '../assets/css/main.css';
-	
-	// import NewTrip from '../js/components/newTrip';
-	
 	
 	document.addEventListener('DOMContentLoaded', function () {
 	  return _reactDom2.default.render(_react2.default.createElement(_nav2.default, null), document.getElementById('reactNav'));
@@ -128,10 +124,6 @@
 	document.addEventListener('DOMContentLoaded', function () {
 	  return _reactDom2.default.render(_react2.default.createElement(_logIn2.default, null), document.getElementById('reactLogIn'));
 	});
-	
-	// document.addEventListener('DOMContentLoaded', () =>
-	// 	{return ReactDOM.render(<NewTrip />,
-	//         document.getElementById('reactNewTrip'));} );
 	
 	document.addEventListener('DOMContentLoaded', function () {
 	  return _reactDom2.default.render(_react2.default.createElement(_packingList2.default, null), document.getElementById('reactPackingList'));
@@ -67651,7 +67643,15 @@
 	            { 'aria-label': 'Current Saved Trips' },
 	            'Current Saved Trips'
 	        ),
-	        _react2.default.createElement('ul', { id: 'tripList' }),
+	        _react2.default.createElement(
+	            'ul',
+	            { id: 'tripList' },
+	            _react2.default.createElement(
+	                'h3',
+	                { id: 'noTrips', className: 'hidden' },
+	                'No trips created yet'
+	            )
+	        ),
 	        _react2.default.createElement(
 	            'button',
 	            { id: 'newTrip', type: 'button' },

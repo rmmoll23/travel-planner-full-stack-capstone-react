@@ -54,7 +54,10 @@ a {
 }
 
 .fadeOutHeader {
-  color: lightblue;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .landingTop {
@@ -63,6 +66,8 @@ a {
   background-size: cover;
   color: lightseagreen;
   margin-top: 70px;
+  display: table;
+  width: 100%;
   /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
 }
 
@@ -580,10 +585,6 @@ footer ul {
   .profile {
     padding-top: 150px;
   }
-
-  .fadeOutHeader {
-    color: white;
-  }
   
   .activitySelection h1 {
     font-size: 25px;
@@ -644,10 +645,6 @@ footer ul {
     display: block;
   }
 
-  .landingTop h2 {
-    padding: 70px;
-  }
-
   .landingBottom h2 {
     padding: 10px;
   }
@@ -684,6 +681,13 @@ footer ul {
   }
 
   .container input {
+    display: block;
+    position: static;
+    width: 95%;
+    margin-bottom: 15px
+  }
+
+  #signUpContainer input {
     display: block;
     position: static;
     width: 95%;
