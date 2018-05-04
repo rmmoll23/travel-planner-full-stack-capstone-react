@@ -4,7 +4,7 @@
 <head>
         <title>Travel Planner</title>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'/>
         <link rel="stylesheet" href="assets/stylesheets/jquery-ui.css">        
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- <link href="assets/stylesheets/jquery.loader.css" rel="stylesheet" /> -->
@@ -365,7 +365,7 @@ function getPlaceUrl(placeId, callback) {
 function datePickerCalendar() {
       $( "#from" ).datepicker({
           defaultDate: "+1d",
-          dateFormat: "mm/dd/yy",
+          dateFormat: "yy/mm/dd",
           minDate: 0,
           changeMonth: true,
           numberOfMonths: 1,
@@ -378,7 +378,7 @@ function datePickerCalendar() {
             }
         });
         $('#to').datepicker({
-            dateFormat: "mm/dd/yy",
+            dateFormat: "yy/mm/dd",
             changeMonth: true,
             numberOfMonths: 1,
             onClose: function () {
