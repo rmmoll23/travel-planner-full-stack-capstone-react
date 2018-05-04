@@ -21984,6 +21984,11 @@
 	            'Log In'
 	        ),
 	        _react2.default.createElement(
+	            'button',
+	            { id: 'signUpButtonNav', type: 'button' },
+	            'Sign Up'
+	        ),
+	        _react2.default.createElement(
 	            'ul',
 	            { className: 'navList-activity hidden' },
 	            _react2.default.createElement(
