@@ -119,6 +119,10 @@ nav a {
   text-decoration: none;
 }
 
+a.current {
+  color: orange;
+}
+
 nav a:hover {
   text-decoration: underline;
 }

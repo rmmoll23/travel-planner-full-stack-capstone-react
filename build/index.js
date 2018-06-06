@@ -21996,7 +21996,7 @@
 	        null,
 	        _react2.default.createElement(
 	          'a',
-	          { id: 'profileNav', href: '#' },
+	          { id: 'profileNav', className: 'links', href: '#' },
 	          'Profile Page'
 	        )
 	      ),
@@ -22005,7 +22005,7 @@
 	        null,
 	        _react2.default.createElement(
 	          'a',
-	          { id: 'packingNav', href: '#' },
+	          { id: 'packingNav', className: 'links', href: '#' },
 	          'Packing List'
 	        )
 	      ),
@@ -22014,7 +22014,7 @@
 	        null,
 	        _react2.default.createElement(
 	          'a',
-	          { id: 'plannerNav', href: '#' },
+	          { id: 'plannerNav', className: 'links', href: '#' },
 	          'Trip Planner'
 	        )
 	      ),
@@ -22023,7 +22023,7 @@
 	        null,
 	        _react2.default.createElement(
 	          'a',
-	          { id: 'activityNav', href: '#' },
+	          { id: 'activityNav', className: 'links', href: '#' },
 	          'Activity Selection Page'
 	        )
 	      )

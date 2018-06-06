@@ -17,10 +17,10 @@ export default function Nav(props) {
                 <button id="logIn-button" type="button">Log In</button>
                 <button id="signUpButtonNav" type="button">Sign Up</button>
                 <ul className="navList hidden">
-                    <li><a id="profileNav" href="#">Profile Page</a></li>
-                    <li><a id="packingNav" href="#">Packing List</a></li>
-                    <li><a id="plannerNav" href="#">Trip Planner</a></li>
-                    <li><a id="activityNav" href="#">Activity Selection Page</a></li>
+                    <li><a id="profileNav" className="links" href="#">Profile Page</a></li>
+                    <li><a id="packingNav" className="links" href="#">Packing List</a></li>
+                    <li><a id="plannerNav" className="links" href="#">Trip Planner</a></li>
+                    <li><a id="activityNav" className="links" href="#">Activity Selection Page</a></li>
                 </ul>
         </nav>
 	)
