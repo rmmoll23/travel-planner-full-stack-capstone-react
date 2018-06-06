@@ -20,10 +20,10 @@ function handleSignupClick() {
         event.preventDefault();
         console.log('submit');
         $('body').loader('show');
-		const username = $('#signUp-username').val();
-		const password = $('#signUp-password').val();
-		const passwordB = $('#signUp-passwordB').val();
-        const firstName = $('#signUp-firstName').val();
+		const username = $('#signUp-username').val().trim();
+		const password = $('#signUp-password').val().trim();
+		const passwordB = $('#signUp-passwordB').val().trim();
+        const firstName = $('#signUp-firstName').val().trim();
         console.log(username, password, passwordB, firstName);
 
 		//Make sure no empty strings will be submitted, then 

@@ -733,18 +733,21 @@ function createTripPost(name, city, username, tripLength) {
       event.preventDefault();
       // console.log('delete');
       const tripName = $(this).parent('li').find('a').html();
-      
-      console.log(tripName);
-      $(this).parent('li').remove();
-      deleteTrip(tripName);
+      var result = confirm("Are you sure you want to delete this trip?");
+      if (result) {
+        //Logic to delete the item
+        console.log(tripName);
+        $(this).parent('li').remove();
+        deleteTrip(tripName);
+      }
     });
 
     // newTrip listeners 
 
     $(document).on('click', '#createTrip', function(event) {
       event.preventDefault();
-      const name = $('#tripName').val();
-      const city = $('#tripLocation').val();
+      const name = $('#tripName').val().trim();
+      const city = $('#tripLocation').val().trim();
       if (name === '') {
         alert('Must enter a trip name');
       }
@@ -1075,7 +1078,7 @@ function createTripPost(name, city, username, tripLength) {
       let day = $(this).parent('.dayActivity').parent('.activities').parent('.dayPage').find('.dayHeader').text();
       day = day = day.replace(/\D/g,'');
       const activityName = $(this).parent('.dayActivity').find('a').text();
-      const notes = $(this).parent('.dayActivity').find('textarea').val();
+      const notes = $(this).parent('.dayActivity').find('textarea').val().trim();
       const tripName = store.tripName;
       
       updateNotes(day, activityName, notes, tripName);
@@ -1101,7 +1104,7 @@ function createTripPost(name, city, username, tripLength) {
 
     $(document).on('click', '.button-addItem', function(event) {
       event.preventDefault();
-      const itemAdded = $(this).parent('.listBox').find('.itemToAdd').val();
+      const itemAdded = $(this).parent('.listBox').find('.itemToAdd').val().trim();
       if (itemAdded === '') {
         alert('Item input field cannot be blank');
       }
