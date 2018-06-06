@@ -115,6 +115,14 @@ nav {
   z-index: 1000;
 }
 
+nav a {
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
 nav ul {
   margin: 0;
   padding: 0 15px 0 0;
