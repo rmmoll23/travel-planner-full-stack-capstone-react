@@ -21942,7 +21942,7 @@
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-	    value: true
+	  value: true
 	});
 	exports.default = Nav;
 	
@@ -21969,159 +21969,66 @@
 	(0, _enzyme.configure)({ adapter: new _enzymeAdapterReact2.default() });
 	
 	function Nav(props) {
-	    return _react2.default.createElement(
-	        'nav',
-	        { role: 'navigation' },
+	  return _react2.default.createElement(
+	    'nav',
+	    { role: 'navigation' },
+	    _react2.default.createElement(
+	      'h1',
+	      null,
+	      _react2.default.createElement('img', { className: 'logo', src: 'assets/stylesheets/images/globeIcon.png' }),
+	      '\xA0 \xA0Travel Planner'
+	    ),
+	    _react2.default.createElement(
+	      'button',
+	      { id: 'logIn-button', type: 'button' },
+	      'Log In'
+	    ),
+	    _react2.default.createElement(
+	      'button',
+	      { id: 'signUpButtonNav', type: 'button' },
+	      'Sign Up'
+	    ),
+	    _react2.default.createElement(
+	      'ul',
+	      { className: 'navList hidden' },
+	      _react2.default.createElement(
+	        'li',
+	        null,
 	        _react2.default.createElement(
-	            'h1',
-	            null,
-	            _react2.default.createElement('img', { className: 'logo', src: 'assets/stylesheets/images/globeIcon.png' }),
-	            '\xA0 \xA0Travel Planner'
-	        ),
-	        _react2.default.createElement(
-	            'button',
-	            { id: 'logIn-button', type: 'button' },
-	            'Log In'
-	        ),
-	        _react2.default.createElement(
-	            'button',
-	            { id: 'signUpButtonNav', type: 'button' },
-	            'Sign Up'
-	        ),
-	        _react2.default.createElement(
-	            'ul',
-	            { className: 'navList-activity hidden' },
-	            _react2.default.createElement(
-	                'li',
-	                null,
-	                _react2.default.createElement(
-	                    'a',
-	                    { id: 'profileNav-activity', href: '#' },
-	                    'Profile Page'
-	                )
-	            ),
-	            _react2.default.createElement(
-	                'li',
-	                null,
-	                _react2.default.createElement(
-	                    'a',
-	                    { id: 'packingNav-activity', href: '#' },
-	                    'Packing List'
-	                )
-	            ),
-	            _react2.default.createElement(
-	                'li',
-	                null,
-	                _react2.default.createElement(
-	                    'a',
-	                    { id: 'plannerNav-activity', href: '#' },
-	                    'Trip Planner'
-	                )
-	            )
-	        ),
-	        _react2.default.createElement(
-	            'ul',
-	            { className: 'navList-planner hidden' },
-	            _react2.default.createElement(
-	                'li',
-	                null,
-	                _react2.default.createElement(
-	                    'a',
-	                    { id: 'profileNav-planner', href: '#' },
-	                    'Profile Page'
-	                )
-	            ),
-	            _react2.default.createElement(
-	                'li',
-	                null,
-	                _react2.default.createElement(
-	                    'a',
-	                    { id: 'packingNav-planner', href: '#' },
-	                    'Packing List'
-	                )
-	            ),
-	            _react2.default.createElement(
-	                'li',
-	                null,
-	                _react2.default.createElement(
-	                    'a',
-	                    { id: 'activityNav-planner', href: '#' },
-	                    'Activity Selection Page'
-	                )
-	            )
-	        ),
-	        _react2.default.createElement(
-	            'ul',
-	            { className: 'navList-day hidden' },
-	            _react2.default.createElement(
-	                'li',
-	                null,
-	                _react2.default.createElement(
-	                    'a',
-	                    { id: 'profileNav-day', href: '#' },
-	                    'Profile Page'
-	                )
-	            ),
-	            _react2.default.createElement(
-	                'li',
-	                null,
-	                _react2.default.createElement(
-	                    'a',
-	                    { id: 'packingNav-day', href: '#' },
-	                    'Packing List'
-	                )
-	            ),
-	            _react2.default.createElement(
-	                'li',
-	                null,
-	                _react2.default.createElement(
-	                    'a',
-	                    { id: 'plannerNav-day', href: '#' },
-	                    'Trip Planner'
-	                )
-	            ),
-	            _react2.default.createElement(
-	                'li',
-	                null,
-	                _react2.default.createElement(
-	                    'a',
-	                    { id: 'activityNav-day', href: '#' },
-	                    'Activity Selection Page'
-	                )
-	            )
-	        ),
-	        _react2.default.createElement(
-	            'ul',
-	            { className: 'navList-packing hidden' },
-	            _react2.default.createElement(
-	                'li',
-	                null,
-	                _react2.default.createElement(
-	                    'a',
-	                    { id: 'profileNav-packing', href: '#' },
-	                    'Profile Page'
-	                )
-	            ),
-	            _react2.default.createElement(
-	                'li',
-	                null,
-	                _react2.default.createElement(
-	                    'a',
-	                    { id: 'plannerNav-packing', href: '#' },
-	                    'Trip Planner'
-	                )
-	            ),
-	            _react2.default.createElement(
-	                'li',
-	                null,
-	                _react2.default.createElement(
-	                    'a',
-	                    { id: 'activityNav-packing', href: '#' },
-	                    'Activity Selection Page'
-	                )
-	            )
+	          'a',
+	          { id: 'profileNav', href: '#' },
+	          'Profile Page'
 	        )
-	    );
+	      ),
+	      _react2.default.createElement(
+	        'li',
+	        null,
+	        _react2.default.createElement(
+	          'a',
+	          { id: 'packingNav', href: '#' },
+	          'Packing List'
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'li',
+	        null,
+	        _react2.default.createElement(
+	          'a',
+	          { id: 'plannerNav', href: '#' },
+	          'Trip Planner'
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'li',
+	        null,
+	        _react2.default.createElement(
+	          'a',
+	          { id: 'activityNav', href: '#' },
+	          'Activity Selection Page'
+	        )
+	      )
+	    )
+	  );
 	}
 
 /***/ }),

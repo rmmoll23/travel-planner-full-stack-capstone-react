@@ -16,27 +16,12 @@ export default function Nav(props) {
                 <h1><img className="logo" src="assets/stylesheets/images/globeIcon.png" />&nbsp; &nbsp;Travel Planner</h1>
                 <button id="logIn-button" type="button">Log In</button>
                 <button id="signUpButtonNav" type="button">Sign Up</button>
-                <ul className="navList-activity hidden">
-                    <li><a id="profileNav-activity" href="#">Profile Page</a></li>
-                    <li><a id="packingNav-activity" href="#">Packing List</a></li>
-                    <li><a id="plannerNav-activity" href="#">Trip Planner</a></li>
-                </ul> 
-                <ul className="navList-planner hidden">
-                    <li><a id="profileNav-planner" href="#">Profile Page</a></li>
-                    <li><a id="packingNav-planner" href="#">Packing List</a></li>
-                    <li><a id="activityNav-planner" href="#">Activity Selection Page</a></li>
+                <ul className="navList hidden">
+                    <li><a id="profileNav" href="#">Profile Page</a></li>
+                    <li><a id="packingNav" href="#">Packing List</a></li>
+                    <li><a id="plannerNav" href="#">Trip Planner</a></li>
+                    <li><a id="activityNav" href="#">Activity Selection Page</a></li>
                 </ul>
-                <ul className="navList-day hidden">
-                    <li><a id="profileNav-day" href="#">Profile Page</a></li>
-                    <li><a id="packingNav-day" href="#">Packing List</a></li>
-                    <li><a id="plannerNav-day" href="#">Trip Planner</a></li>
-                    <li><a id="activityNav-day" href="#">Activity Selection Page</a></li>
-                </ul>
-                <ul className="navList-packing hidden">
-                    <li><a id="profileNav-packing" href="#">Profile Page</a></li>
-                    <li><a id="plannerNav-packing" href="#">Trip Planner</a></li>
-                    <li><a id="activityNav-packing" href="#">Activity Selection Page</a></li>
-                </ul>   
         </nav>
 	)
 }
