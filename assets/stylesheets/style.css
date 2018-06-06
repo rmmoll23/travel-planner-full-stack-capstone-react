@@ -121,6 +121,7 @@ nav a {
 
 a.current {
   color: orange;
+  text-decoration: underline;
 }
 
 nav a:hover {
