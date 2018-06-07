@@ -19,7 +19,7 @@ function handleSignupClick() {
     $(document).on('submit', '#signUpForm', function(event) {
         event.preventDefault();
         console.log('submit');
-        $('body').loader('show');
+        $('html').loader('show');
 		const username = $('#signUp-username').val().trim();
 		const password = $('#signUp-password').val().trim();
 		const passwordB = $('#signUp-passwordB').val().trim();
@@ -49,7 +49,7 @@ function handleSignupClick() {
                             console.log('account created');
                             $('.signUp').addClass('hidden');
                             $('.logIn').removeClass('hidden');
-                            $('body').loader('hide');
+                            $('html').loader('hide');
                             alert('Sign up successful');
                     } else {
                         clearInputs();

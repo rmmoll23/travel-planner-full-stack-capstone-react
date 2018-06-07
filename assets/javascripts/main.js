@@ -228,7 +228,7 @@ function getFirstName(username) {
 // Trip Requests
 function createTripPost(name, city, username, tripLength) {
   // console.log('tripToDatabase');
-      $('body').loader('show');
+      $('html').loader('show');
       const createTripObject = {
         username: username,
         tripName: name,
@@ -260,7 +260,7 @@ function createTripPost(name, city, username, tripLength) {
         $('.navList').removeClass('hidden');
         $('.links').removeClass('current');
         $('#activityNav').addClass('current');
-        $('body').loader('hide');
+        $('html').loader('hide');
       })
     }
 
@@ -305,7 +305,7 @@ function createTripPost(name, city, username, tripLength) {
 
    function getTrip(name) {
     // console.log(`Retrieving trip ${name}`);
-    $('body').loader('show');
+    $('html').loader('show');
     const tripName = name.replace(' ', '-');
     const username = localStorage.getItem('username');
     const getTripURL = serverBase + `/trips/${username}/${tripName}`;
@@ -327,7 +327,7 @@ function createTripPost(name, city, username, tripLength) {
       displayDayView();
       getActivities();
       getPackingListItems();
-      $('body').loader('hide');
+      $('html').loader('hide');
       })
       .fail(function(error) {
         // console.log(error);
