@@ -121,6 +121,7 @@ nav a {
 
 a.current {
   color: orange;
+  text-decoration: underline;
 }
 
 nav a:hover {
@@ -153,7 +154,7 @@ nav h1 {
 
 .landingBottom h2 {
   border-bottom: lightseagreen solid;
-  width: max-content;
+  width: 300px;
   margin: 0 auto;
 }
 
@@ -173,7 +174,6 @@ nav h1 {
 
 .container h1 {
   border-bottom: lightseagreen solid;
-  width: max-content;
   margin: 0 auto;
   padding-bottom: 5px;
 }
@@ -242,6 +242,7 @@ h1, h2 {
   height: 100px;
   min-width: 200px;
   overflow: scroll;
+  max-width: 250px;
 }
 
 .profile {
@@ -253,7 +254,6 @@ h1, h2 {
 
 .profile ul {
   border: black solid;
-  width: max-content;
   padding: 15px;
   margin: 0 auto;
   background-color: white;
@@ -309,7 +309,7 @@ span {
 
 .activitySelection h1 {
   border-bottom: solid lightseagreen;
-  width: max-content;
+  width: 400px;
   margin: 0 auto 30px auto;
 }
 
@@ -373,9 +373,14 @@ span {
   background-color: lightblue;
 }
 
-.tripPlanner h1,h3 {
+.tripPlanner h1 {
   border-bottom: solid black;
-  width: max-content;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.tripPlanner h3 {
+  border-bottom: solid black;
   margin: 0 auto;
 }
 
@@ -466,9 +471,13 @@ span {
 
 .packListHeaders {
   border-bottom: solid lightseagreen;
-  width: max-content;
+  width: 200px;
   margin: 0 auto 15px auto;
   padding-bottom: 10px;
+}
+
+.viewHeader {
+  width: 300px;
 }
 
 .packingList ul {
@@ -504,7 +513,7 @@ span {
   border: lightseagreen solid;
   display: inline-block;
   width: 25%;
-  margin: 10px auto 10px auto;
+  margin: 10px 5px;
   padding: 15px;
   height: 300px;
   min-width: 250px;
@@ -600,6 +609,7 @@ footer ul {
   .packListContainer {
     width: 70%;
     display: block;
+    margin: 10px auto;
   }
 
   .notesInput {

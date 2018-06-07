@@ -1078,8 +1078,7 @@ function createTripPost(name, city, username, tripLength) {
       $('.tripPlanner').addClass('hidden');
       $('.dayView').removeClass('hidden');
       $(element).removeClass('hidden');
-      $('.navList-planner').addClass('hidden');
-      $('.navList-day').removeClass('hidden');
+      $('.links').removeClass('current');
     
       }
     });
