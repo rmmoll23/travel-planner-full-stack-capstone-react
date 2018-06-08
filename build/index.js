@@ -67135,7 +67135,7 @@
 	                null,
 	                _react2.default.createElement(
 	                    'a',
-	                    { href: 'https://www.linkedin.com/in/ryan-moll-a876ba70/', target: '_blank' },
+	                    { href: 'https://linkedin.com/in/rmmoll/', target: '_blank' },
 	                    'LinkedIn'
 	                )
 	            ),
