@@ -24,9 +24,9 @@ export default function Landing(props) {
                         <li aria-label="Add them to your Planner" id="addToPlannerSample">Add them to your planner</li>
                         <li aria-label="Make a packing list" id="packingListSample">Make a packing list</li>
                 </ul>
-                <video id="searchSampleVideo" className="hidden"  src="../../assets/stylesheets/images/activitySearchExample.mp4" controls></video>
-                <video id="addToPlannerSampleVideo" className="hidden"  src="../../assets/stylesheets/images/addItemExample.mp4" controls></video> 
-                <video id="packingListSampleVideo" className="hidden"  src="../../assets/stylesheets/images/packingListExample.mp4" controls></video>     
+                <video id="searchSampleVideo" className="hidden"  src="../assets/stylesheets/images/activitySearchExample.mp4" controls></video>
+                <video id="addToPlannerSampleVideo" className="hidden"  src="../assets/stylesheets/images/addItemExample.mp4" controls></video> 
+                <video id="packingListSampleVideo" className="hidden"  src="../assets/stylesheets/images/packingListExample.mp4" controls></video>     
             </div>
     
         </main>

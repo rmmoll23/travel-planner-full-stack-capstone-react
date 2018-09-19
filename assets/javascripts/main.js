@@ -733,14 +733,14 @@ function createTripPost(name, city, username, tripLength) {
     // change video sources based on window size
     $(function(){
       if ($(window).width() > 500) {
-          $('#searchSampleVideo').attr('src','../stylesheets/images/activitySearchExample.mp4');
-          $('#addToPlannerSampleVideo').attr('src','../stylesheets/images/addItemExample.mp4');
-          $('#packingListSampleVideo').attr('src','../stylesheets/images/packingListExample.mp4');
+          $('#searchSampleVideo').attr('src','./stylesheets/images/activitySearchExample.mp4');
+          $('#addToPlannerSampleVideo').attr('src','./stylesheets/images/addItemExample.mp4');
+          $('#packingListSampleVideo').attr('src','./stylesheets/images/packingListExample.mp4');
       }
       else if ($(window).width() < 500) {
-          $('#searchSampleVideo').attr('src','../stylesheets/images/searchExamplePhone.mp4');
-          $('#addToPlannerSampleVideo').attr('src','../stylesheets/images/addItemToPlannerExamplePhone.mp4');
-          $('#packingListSampleVideo').attr('src','../stylesheets/images/packingListExamplePhone.mp4');
+          $('#searchSampleVideo').attr('src','./stylesheets/images/searchExamplePhone.mp4');
+          $('#addToPlannerSampleVideo').attr('src','./stylesheets/images/addItemToPlannerExamplePhone.mp4');
+          $('#packingListSampleVideo').attr('src','./stylesheets/images/packingListExamplePhone.mp4');
       }
   });
 
