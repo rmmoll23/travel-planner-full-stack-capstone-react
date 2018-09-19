@@ -67216,20 +67216,23 @@
 	                                { className: 'landingList' },
 	                                _react2.default.createElement(
 	                                        'li',
-	                                        { 'aria-label': 'Search for things to do' },
+	                                        { 'aria-label': 'Search for things to do', id: 'searchSample' },
 	                                        'Search for things to do'
 	                                ),
 	                                _react2.default.createElement(
 	                                        'li',
-	                                        { 'aria-label': 'Add them to your Planner' },
+	                                        { 'aria-label': 'Add them to your Planner', id: 'addToPlannerSample' },
 	                                        'Add them to your planner'
 	                                ),
 	                                _react2.default.createElement(
 	                                        'li',
-	                                        { 'aria-label': 'Make a packing list' },
+	                                        { 'aria-label': 'Make a packing list', id: 'packingListSample' },
 	                                        'Make a packing list'
 	                                )
-	                        )
+	                        ),
+	                        _react2.default.createElement('video', { id: 'searchSampleVideo', className: 'hidden', src: '../../assets/stylesheets/images/activitySearchExample.mp4', controls: true }),
+	                        _react2.default.createElement('video', { id: 'addToPlannerSampleVideo', className: 'hidden', src: '../../assets/stylesheets/images/addItemExample.mp4', controls: true }),
+	                        _react2.default.createElement('video', { id: 'packingListSampleVideo', className: 'hidden', src: '../../assets/stylesheets/images/packingListExample.mp4', controls: true })
 	                )
 	        );
 	}

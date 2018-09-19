@@ -681,6 +681,69 @@ function createTripPost(name, city, username, tripLength) {
       $('.logIn').removeClass('hidden');
     });
 
+        // example videos of site features
+    $(document).on('click', '#searchSample', function(event) {
+      event.preventDefault();
+      if ($('#searchSample').hasClass('backgroundColor')) {
+        $('#searchSample').removeClass('backgroundColor');
+        $('#searchSampleVideo').addClass('hidden');
+      }
+      else {
+        $('#searchSampleVideo').removeClass('hidden');
+        $('#addToPlannerSampleVideo').addClass('hidden');
+        $('#packingListSampleVideo').addClass('hidden');
+        $('#searchSample').addClass('backgroundColor');
+        $('#addToPlannerSample').removeClass('backgroundColor');
+        $('#packingListSample').removeClass('backgroundColor');
+      }
+    });
+
+    $(document).on('click', '#addToPlannerSample', function(event) {
+      event.preventDefault();
+      if ($('#addToPlannerSample').hasClass('backgroundColor')) {
+        $('#addToPlannerSample').removeClass('backgroundColor');
+        $('#addToPlannerSampleVideo').addClass('hidden');
+      }
+      else {
+        $('#searchSampleVideo').addClass('hidden');
+        $('#addToPlannerSampleVideo').removeClass('hidden');
+        $('#packingListSampleVideo').addClass('hidden');
+        $('#searchSample').removeClass('backgroundColor');
+        $('#addToPlannerSample').addClass('backgroundColor');
+        $('#packingListSample').removeClass('backgroundColor');
+      }
+    });
+
+    $(document).on('click', '#packingListSample', function(event) {
+      event.preventDefault();
+      if ($('#packingListSample').hasClass('backgroundColor')) {
+        $('#packingListSample').removeClass('backgroundColor');
+        $('#packingListSampleVideo').addClass('hidden');
+      }
+      else {
+        $('#searchSampleVideo').addClass('hidden');
+        $('#addToPlannerSampleVideo').addClass('hidden');
+        $('#packingListSampleVideo').removeClass('hidden');
+        $('#searchSample').removeClass('backgroundColor');
+        $('#addToPlannerSample').removeClass('backgroundColor');
+        $('#packingListSample').addClass('backgroundColor');
+      }
+    });
+
+    // change video sources based on window size
+    $(function(){
+      if ($(window).width() > 500) {
+          $('#searchSampleVideo').attr('src','../stylesheets/images/activitySearchExample.mp4');
+          $('#addToPlannerSampleVideo').attr('src','../stylesheets/images/addItemExample.mp4');
+          $('#packingListSampleVideo').attr('src','../stylesheets/images/packingListExample.mp4');
+      }
+      else if ($(window).width() < 500) {
+          $('#searchSampleVideo').attr('src','../stylesheets/images/searchExamplePhone.mp4');
+          $('#addToPlannerSampleVideo').attr('src','../stylesheets/images/addItemToPlannerExamplePhone.mp4');
+          $('#packingListSampleVideo').attr('src','../stylesheets/images/packingListExamplePhone.mp4');
+      }
+  });
+
     // signUp listeners
 
     $(document).on('click', '#cancel', function(event) {
