@@ -64,32 +64,8 @@ function handleSignupClick() {
                         clearInputs();
                         const alertError = err;
                         alertUser(alertError);
+                        $('html').loader('hide');
                     });
-                    // $.ajax({
-                    //     contentType: 'application/json',
-                    //     //contentType and processData must be set to false when using FormData
-                    //     contentType: false,
-                    //     processData: false,
-                    //     data: JSON.stringify(newSignUpObject),
-                    //     success: function(result){
-                    //         if (result.username) {
-                    //                 console.log('account created');
-                    //                 $('.signUp').addClass('hidden');
-                    //                 $('.logIn').removeClass('hidden');
-                    //         } else {
-                    //             clearInputs();
-                    //             const alertInvalid = 'Please enter a valid username and/or password.';
-                    //             alertUser(alertInvalid);
-                    //         }
-                    //     },
-                    //     error: function(err){
-                    //         clearInputs();
-                    //         const alertError = err;
-                    //         alertUser(alertError);
-                    //     },
-                    //     type: 'POST',
-                    //     url: serverBase + '/api/users/'
-                    // });
                 } else {
                     const alertMessage = `Passwords don't match.`;
                     alertUser(alertMessage);

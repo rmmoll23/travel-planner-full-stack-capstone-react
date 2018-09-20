@@ -11,8 +11,8 @@ let store = {
 
 
   
-  const serverBase = 'https://travel-planner-capstone.herokuapp.com';
-  // const serverBase = '';
+  // const serverBase = 'https://travel-planner-capstone.herokuapp.com';
+  const serverBase = '';
   
   
   // API Calls
@@ -733,16 +733,18 @@ function createTripPost(name, city, username, tripLength) {
     // change video sources based on window size
     $(function(){
       if ($(window).width() > 500) {
+        console.log("greater than 500");
           $('#searchSampleVideo').attr('src','./stylesheets/images/activitySearchExample.mp4');
           $('#addToPlannerSampleVideo').attr('src','./stylesheets/images/addItemExample.mp4');
           $('#packingListSampleVideo').attr('src','./stylesheets/images/packingListExample.mp4');
       }
       else if ($(window).width() < 500) {
+        console.log("less than 500");
           $('#searchSampleVideo').attr('src','./stylesheets/images/searchExamplePhone.mp4');
           $('#addToPlannerSampleVideo').attr('src','./stylesheets/images/addItemToPlannerExamplePhone.mp4');
           $('#packingListSampleVideo').attr('src','./stylesheets/images/packingListExamplePhone.mp4');
       }
-  });
+    });
 
     // signUp listeners
 

@@ -54,6 +54,7 @@ function handleLoginSubmit() {
 					console.log(errorThrown);
 					const alertError = 'Error encountered in POST.';
 					alertUser(alertError);
+					$('html').loader('hide');
 				});
 			
 		} else {
