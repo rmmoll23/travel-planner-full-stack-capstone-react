@@ -1163,9 +1163,42 @@ function createTripPost(name, city, username, tripLength) {
     })
   
   }
+
+  function datePickerCalendar() {
+    $( "#from" ).datepicker({
+        defaultDate: "+1d",
+        dateFormat: "yy/mm/dd",
+        minDate: 0,
+        changeMonth: true,
+        numberOfMonths: 1,
+        onSelect: function (date) {
+              var date2 = $('#from').datepicker('getDate');
+              date2.setDate(date2.getDate() + 1);
+              // $('#to').datepicker('setDate', date2);
+              //sets minDate to from date + 1
+              $('#to').datepicker('option', 'minDate', date2);
+          }
+      });
+      $('#to').datepicker({
+          dateFormat: "yy/mm/dd",
+          changeMonth: true,
+          numberOfMonths: 1,
+          onClose: function () {
+              var from = $('#from').datepicker('getDate');
+              var to = $('#to').datepicker('getDate');
+              //check to prevent a user from entering a date below date of from
+              if (to <= from) {
+                  var minDate = $('#to').datepicker('option', 'minDate');
+                  $('#to').datepicker('setDate', minDate);
+              }
+          }
+      });
+};
+
   
   
   $(function() {
+    datePickerCalendar();
     handleEventListeners();
     $(".fadeOutHeader").fadeOut(18000);
     });
