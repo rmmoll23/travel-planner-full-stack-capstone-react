@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () =>
 	document.getElementById('reactLogIn'));} );
 	
 document.addEventListener('DOMContentLoaded', () =>
-	{return ReactDOM.render(<NewTrip/>,
+	{return ReactDOM.render(<NewTrip />,
         document.getElementById('reactNewTrip'));} );
         
 document.addEventListener('DOMContentLoaded', () =>
