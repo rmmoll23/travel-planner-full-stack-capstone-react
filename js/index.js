@@ -10,7 +10,6 @@ import DayView from '../js/components/dayView';
 import Footer from '../js/components/footer';
 import Landing from '../js/components/landing';
 import LogIn from '../js/components/logIn';
-import NewTrip from '../js/components/newTrip';
 import PackingList from '../js/components/packingList';
 import Profile from '../js/components/profile';
 import SignUp from '../js/components/signUp';
@@ -41,10 +40,6 @@ document.addEventListener('DOMContentLoaded', () =>
 document.addEventListener('DOMContentLoaded', () =>
 	{return ReactDOM.render(<LogIn />,
 	document.getElementById('reactLogIn'));} );
-	
-document.addEventListener('DOMContentLoaded', () =>
-	{return ReactDOM.render(<NewTrip />,
-        document.getElementById('reactNewTrip'));} );
         
 document.addEventListener('DOMContentLoaded', () =>
 	{return ReactDOM.render(<PackingList />,
