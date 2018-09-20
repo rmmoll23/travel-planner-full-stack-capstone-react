@@ -67399,7 +67399,7 @@
 	                ),
 	                _react2.default.createElement(
 	                    'label',
-	                    { 'for': 'tripName' },
+	                    { htmlFor: 'tripName' },
 	                    'Name of trip'
 	                ),
 	                _react2.default.createElement('input', { 'aria-label': 'Enter name of trip', type: 'text', id: 'tripName', placeholder: 'Enter name of trip', name: 'tripName', required: true }),
@@ -67407,7 +67407,7 @@
 	                _react2.default.createElement('br', null),
 	                _react2.default.createElement(
 	                    'label',
-	                    { 'for': 'city' },
+	                    { htmlFor: 'city' },
 	                    'Location'
 	                ),
 	                _react2.default.createElement('input', { 'aria-label': 'Enter city of trip', type: 'text', id: 'tripLocation', placeholder: 'Enter city: \'Austin, TX\' or \'London, UK\'', name: 'city', required: true }),
@@ -67415,18 +67415,18 @@
 	                _react2.default.createElement('br', null),
 	                _react2.default.createElement(
 	                    'label',
-	                    { 'for': 'from' },
+	                    { htmlFor: 'from' },
 	                    'Start Date'
 	                ),
-	                _react2.default.createElement('input', { 'aria-label': 'Enter start date of trip', type: 'text', id: 'from', name: 'from', placeholder: 'Enter trip start date', readonly: 'true' }),
+	                _react2.default.createElement('input', { 'aria-label': 'Enter start date of trip', type: 'text', id: 'from', name: 'from', placeholder: 'Enter trip start date', readOnly: 'true' }),
 	                _react2.default.createElement('br', null),
 	                _react2.default.createElement('br', null),
 	                _react2.default.createElement(
 	                    'label',
-	                    { 'for': 'to' },
+	                    { htmlFor: 'to' },
 	                    'End Date'
 	                ),
-	                _react2.default.createElement('input', { 'aria-label': 'Enter end date of trip', type: 'text', id: 'to', name: 'to', placeholder: 'Enter trip end date', readonly: 'true' }),
+	                _react2.default.createElement('input', { 'aria-label': 'Enter end date of trip', type: 'text', id: 'to', name: 'to', placeholder: 'Enter trip end date', readOnly: 'true' }),
 	                _react2.default.createElement('br', null),
 	                _react2.default.createElement('br', null),
 	                _react2.default.createElement(
