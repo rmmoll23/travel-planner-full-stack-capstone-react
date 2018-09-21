@@ -607,6 +607,11 @@ function createTripPost(name, city, username, tripLength) {
 
   function displayDayViewContent(name, address, daySelected, url, notes) {
     let dayViewContent = '';
+    const days = store.tripLength;
+    let dropDown = '';
+    for (let i = 1; i <= days; i++) {
+      dropDown += `<option class="dropDownDay${i}" value="day${i}">Day ${i}</option>`;
+    }
     if (url === undefined) {
       dayViewContent = `<div class="dayActivity">
       <h2>${name}</h2>
